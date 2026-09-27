@@ -41,28 +41,31 @@ img{width:100%;border:3px solid #FFD700;border-radius:12px;margin:15px 0}
 </div>
 
 <script>
-// Auto Gallery - GitHub se sari images khud load karega
 async function loadImages(){
   const gallery = document.getElementById('gallery');
+  gallery.innerHTML = '<p style="color:gold;">Loading Grok proofs from 644...</p>';
+  let allImages = [];
   try {
-    const res = await fetch('https://api.github.com/repos/drssssherozes-ctrl/drssssherozes-ctrl.github.io/contents/');
-    const files = await res.json();
+    const res1 = await fetch('https://api.github.com/repos/drssssherozes-ctrl/drssssherozes-ctrl.github.io/contents/');
+    const files1 = await res1.json();
+    files1.forEach(f=>{ if(f.name.match(/\.(jpg|jpeg|png)$/i)) allImages.push(f.name); });
+    const res2 = await fetch('https://api.github.com/repos/drssssherozes-ctrl/drssssherozes-ctrl.github.io/contents/grok-proofs');
+    if(res2.ok){
+      const files2 = await res2.json();
+      files2.forEach(f=>{ if(f.name.match(/\.(jpg|jpeg|png)$/i)) allImages.push('grok-proofs/'+f.name); });
+    }
     gallery.innerHTML = '';
-    files.forEach(file => {
-      if(file.name.match(/\.(jpg|jpeg|png|JPG|JPEG|PNG)$/)){
-        const img = document.createElement('img');
-        img.src = file.name;
-        img.alt = file.name;
-        gallery.appendChild(img);
-      }
+    allImages.forEach(name=>{
+      const img = document.createElement('img');
+      img.src = name;
+      gallery.appendChild(img);
     });
-    if(gallery.innerHTML === '') gallery.innerHTML = '<p>No images found yet. Upload Grok screenshots!</p>';
   } catch(e){
-    gallery.innerHTML = '<p style="color:red;">Images API loading... Refresh after 1 min</p>';
+    gallery.innerHTML = '<p>Refresh after 1 min...</p>';
   }
 }
 loadImages();
-</script>
+                                                               </script>
 
 </body>
 </html>
