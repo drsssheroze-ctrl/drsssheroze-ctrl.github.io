@@ -1,65 +1,28 @@
 <!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Grok Proofs - Verified Gallery</title>
+<html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Full Recovery</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:system-ui,-apple-system,sans-serif;background:#0f172a;color:#e2e8f0;padding:16px}
-h1{color:#2dd4bf;font-size:20px;text-align:center;margin:10px 0}
-.subtitle{text-align:center;background:#1e293b;color:#7dd3fc;padding:8px;border-radius:8px;font-size:12px;margin-bottom:20px;border:1px solid #334155}
-#gallery{display:grid;grid-template-columns:1fr;gap:20px;max-width:800px;margin:0 auto}
-@media(min-width:700px){#gallery{grid-template-columns:repeat(2,1fr)}}
-.card{background:#1e293b;border-radius:12px;overflow:hidden;border:1px solid #334155;box-shadow:0 4px 10px rgba(0,0,0,0.3)}
-.card img{width:100%;height:auto;display:block;cursor:zoom-in;background:#020617}
-.info{padding:10px 12px;display:flex;justify-content:space-between;align-items:center;background:#020617;font-size:12px;color:#94a3b8}
-.badge{background:#0f766e;color:#5eead4;padding:4px 12px;border-radius:20px;font-size:11px;font-weight:bold;border:1px solid #14b8a6}
-.filename{color:#cbd5e1;font-size:11px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:150px}
-/* FULL SCREEN MODAL - CLICK TO ZOOM */
-#modal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.95);z-index:9999;justify-content:center;align-items:center;padding:20px}
-#modal img{max-width:100%;max-height:90vh;object-fit:contain;border-radius:8px}
-#modalClose{position:absolute;top:15px;right:20px;color:white;background:#1e293b;border:1px solid #2dd4bf;padding:8px 18px;border-radius:20px;cursor:pointer}
-</style>
-</head>
-<body>
-<h1>🛡️ Grok Proofs - Verified Gallery</h1>
-<div class="subtitle">✅ Font Same | ✅ 4 Grok Proofs Safe | ✅ Top-Bottom Full | ✅ Click to Zoom | ✅ Bahar wali 10 Hide</div>
-<div id="gallery">Loading proofs...</div>
-
-<div id="modal" onclick="this.style.display='none'">
-  <div id="modalClose">✕ Close</div>
-  <img id="modalImg" src="">
-</div>
-
+*{box-sizing:border-box}body{font-family:system-ui;background:#0f172a;color:white;padding:15px}
+h1{text-align:center;color:#2dd4bf;margin-bottom:10px}
+#gallery{columns:1;gap:15px;max-width:900px;margin:auto} @media(min-width:600px){#gallery{columns:2}} @media(min-width:900px){#gallery{columns:3}}
+.card{break-inside:avoid;background:#1e293b;border-radius:12px;overflow:hidden;margin-bottom:15px;border:1px solid #334155}
+.card img{width:100%;height:auto;display:block}
+.info{padding:8px 10px;font-size:11px;display:flex;justify-content:space-between;background:#020617}
+.badge{color:#5eead4;font-weight:bold}
+</style></head><body>
+<h1>Full Recovery - All Files Visible</h1>
+<div id="gallery">Loading all your proofs...</div>
 <script>
-const USER="drssssherozes-ctrl";
-const REPO="drssssherozes-ctrl.github.io";
-const FOLDER="grok-proofs";
-
-async function loadProofs(){
-  try{
-    const res=await fetch(`https://api.github.com/repos/${USER}/${REPO}/contents/${FOLDER}`);
-    const files=await res.json();
-    const g=document.getElementById('gallery');
-    g.innerHTML="";
-    files.filter(f=>f.name.match(/\.(jpg|jpeg|png|webp)$/i)).forEach(f=>{
-      g.innerHTML+=`
-      <div class="card">
-        <img src="${f.download_url}" loading="lazy" onclick="openZoom('${f.download_url}')">
-        <div class="info">
-          <span class="badge">✓ VERIFIED</span>
-          <span class="filename">${f.name}</span>
-        </div>
-      </div>`;
-    });
-  }catch(e){document.getElementById('gallery').innerHTML="Error: "+e.message;}
-}
-function openZoom(src){
-  document.getElementById('modalImg').src=src;
-  document.getElementById('modal').style.display='flex';
-}
-loadProofs();
+const USER="drssssherozes-ctrl",REPO="drssssherozes-ctrl.github.io";
+async function loadAll(){
+  const g=document.getElementById('gallery');g.innerHTML="";
+  // 1. Load from root
+  let root = await fetch(`https://api.github.com/repos/${USER}/${REPO}/contents/`).then(r=>r.json());
+  // 2. Load from grok-proofs
+  let grok = await fetch(`https://api.github.com/repos/${USER}/${REPO}/contents/grok-proofs`).then(r=>r.json()).catch(()=>[]);
+  let all=[...root,...grok];
+  all.filter(f=>f.name.match(/\.(png|jpg|jpeg|webp)$/i)).forEach(f=>{
+    g.innerHTML+=`<div class="card"><img src="${f.download_url}"><div class="info"><span class="badge">✓ ${f.path.includes('grok')?'VERIFIED':''}</span><span>${f.name}</span></div></div>`;
+  });
+}loadAll();
 </script>
-</body>
-</html>
+</body></html>
