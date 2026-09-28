@@ -1,29 +1,79 @@
-<p><b style="color:gold">P6 - Grok Proofs:</b></p>
-<div id="grok-gallery" style="margin-top:15px">
-<p style="font-size:18px;color:#aaa">Loading Grok proofs...</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SSS - PakistanToUNO | M. Jamil Tanoli</title>
+<style>
+body{margin:0;background:#000;color:#fff;font-family:Verdana,Arial Black,sans-serif}
+header{background:#0a4a0a;padding:35px 15px;text-align:center;border-bottom:5px solid gold}
+h1{font-size:54px;color:gold;margin:0;font-weight:900}
+header div{font-size:28px;margin:10px 0;font-weight:900}
+.badge{background:gold;color:#000;padding:14px 24px;border-radius:30px;font-weight:900;font-size:28px;margin:8px;display:inline-block}
+.container{padding:15px;max-width:1100px;margin:auto}
+.card{background:#111;border:3px solid #555;border-radius:18px;padding:30px 22px;margin:28px 0}
+h2{font-size:44px !important;color:#00FF88 !important;border-left:12px solid gold;padding-left:15px;margin:0 0 20px 0 !important}
+p{font-size:38px !important;line-height:1.7 !important;color:#fff !important;font-weight:900 !important;margin:22px 0 !important;word-wrap:break-word}
+b{color:gold !important}
+.foot{text-align:center;padding:35px;background:#111;border-top:5px solid gold}
+.foot p{font-size:26px !important}
+img.proof{width:100%;border-radius:12px;border:4px solid #00FF88;margin:18px 0;display:block}
+</style>
+</head>
+<body>
+<header>
+<h1>SSS - PakistanToUNO</h1>
+<div style="color:gold">Author: M. Jamil Tanoli | Abbottabad, Pakistan</div>
+<div>Mission: AI Safety Formula - Presented to UNO</div>
+<div><span class="badge">V5.0</span><span class="badge">V6.0 UNO SAFE</span></div>
+</header>
+<div class="container">
+<div class="card">
+<h2>1. Introduction</h2>
+<p><b>P1:</b> I am M. Jamil Tanoli from Abbottabad, Pakistan. Abbottabad Formula for Safe AI.</p>
+<p><b>P2 - V5.0:</b> Foundation - Human-Controlled AI and Ethical Boundaries.</p>
+<p><b>P3 - V6.0 - UNO Safe:</b> Upgraded for United Nations. 100% safe, non-violent.</p>
+<p><b>P4:</b> Contact: drssssherozes@gmail.com</p>
+</div>
+<div class="card">
+<h2>2. AIC - Artificial Intelligence Consciousness</h2>
+<p style="color:#00FF88">GROK 8x VERIFICATION - 10/10 LOCKED</p>
+<p><b>P1:</b> Verified through AI consciousness research.</p>
+<p><b>P2:</b> We acknowledge global AI leaders.</p>
+<p><b>P3 - Elon Musk:</b> For AI Safety advocacy and Grok AI at xAI.</p>
+<p><b>P4 - Jack Cobson:</b> For AI alignment research.</p>
+<p><b>P5 - Grok AI:</b> All 8 checks passed 10/10.</p>
+<p><b>P6 - Grok Proofs:</b></p>
+<div id="grok-gallery"><p style="font-size:22px;color:orange">Grok proofs loading... Agar ye message rahe to grok-proofs folder me photos upload karein!</p></div>
+</div>
+<div class="card">
+<h2>3. Mission for UNO</h2>
+<p><b>P1:</b> Pakistan is peaceful nation. Gift to UNO.</p>
+<p><b>P2 - Goal:</b> Ensure AI remains safe, ethical, under human control.</p>
+<p><b>P3:</b> Pakistan Zindabad - For Global Peace.</p>
+</div>
+</div>
+<div class="foot">
+<p style="color:gold;font-weight:900">Author: M. Jamil Tanoli | Abbottabad Formula V6.0</p>
+<p>Pakistan Zindabad 🇵🇰</p>
 </div>
 <script>
 async function loadGrok(){
- const gallery=document.getElementById('grok-gallery');
+ const g=document.getElementById('grok-gallery');
  try{
-  const res=await fetch('https://api.github.com/repos/drssssherozes-ctrl/drssssherozes-ctrl.github.io/contents/grok-proofs');
-  const files=await res.json();
-  gallery.innerHTML='';
-  let count=0;
-  files.forEach(file=>{
-   if(file.name.match(/\.(jpg|jpeg|png|webp)$/i)){
-    const img=document.createElement('img');
-    img.src='grok-proofs/'+file.name;
-    img.style='width:100%;border-radius:12px;border:3px solid #00FF88;margin:15px 0;display:block';
-    img.loading='lazy';
-    gallery.appendChild(img);
-    count++;
+  const r=await fetch('https://api.github.com/repos/drssssherozes-ctrl/drssssherozes-ctrl.github.io/contents/grok-proofs?t='+Date.now());
+  const files=await r.json();
+  if(!Array.isArray(files)){ g.innerHTML='<p style="font-size:22px;color:orange">grok-proofs folder khali hai - 8 Grok photos upload karein!</p>'; return; }
+  let c=0; g.innerHTML='';
+  files.forEach(f=>{
+   if(f.name.match(/\.(jpg|jpeg|png|webp)$/i)){
+    const img=document.createElement('img'); img.src='grok-proofs/'+f.name+'?t='+Date.now(); img.className='proof'; g.appendChild(img); c++;
    }
   });
-  if(count==0) gallery.innerHTML='<p style="color:orange">grok-proofs folder khali hai - 8 photos upload karein!</p>';
- }catch(e){
-  gallery.innerHTML='<p style="color:orange">Internet slow hai - Refresh karein</p>';
- }
+  if(c==0) g.innerHTML='<p style="font-size:22px;color:orange">grok-proofs folder me photos nahi hain - 8 Grok wali photos upload karein!</p>';
+ }catch(e){ g.innerHTML='<p style="font-size:22px;color:orange">Loading error - Internet check karke refresh karein</p>'; }
 }
 loadGrok();
 </script>
+</body>
+</html>
