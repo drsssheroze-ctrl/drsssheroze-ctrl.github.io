@@ -1,71 +1,74 @@
-
-<!DOCTYPE html>
-<html>
+  <!DOCTYPE html>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Abbottabad Formula V5.1 - To UNO</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UN Human Rights Case - Dr. Sheroze</title>
 <style>
-body{background:#000;color:#fff;font-family:Arial;text-align:center;margin:0;padding:15px;border:6px solid #FFD700}
-.box{border:2px solid #FFD700;padding:15px;margin:20px 0;background:#111;border-radius:12px;text-align:left}
-h1{color:#fff} h2{color:#FFD700}
-.gold{color:#FFD700;font-weight:bold}
-img{width:100%;border:3px solid #FFD700;border-radius:12px;margin:15px 0}
-#gallery img{width:100%;margin:15px 0}
+body{font-family:Arial, sans-serif;background:#eef2f7;margin:0;padding:0}
+header{background:linear-gradient(135deg,#0b3d91,#1e90ff);color:white;padding:30px 20px;text-align:center}
+header h1{margin:0;font-size:28px}
+header p{opacity:0.9}
+.container{max-width:1000px;margin:20px auto;padding:0 15px}
+.card{background:white;border-radius:12px;padding:20px;margin-bottom:20px;box-shadow:0 4px 12px rgba(0,0,0,0.1)}
+.card h2{color:#0b3d91;border-left:5px solid #0b3d91;padding-left:10px}
+.proof-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:15px}
+.proof{border:1px solid #ddd;border-radius:10px;overflow:hidden;background:#fafafa}
+.proof img{width:100%;height:auto;display:block}
+.proof .label{padding:10px;font-weight:bold;font-size:14px;background:white}
+.footer{text-align:center;padding:20px;color:#666;font-size:13px}
 </style>
 </head>
 <body>
+<header>
+<h1>UN Human Rights Violation - Evidence Portal</h1>
+<p>Submitted by Dr. Sheroze | For Justice & Truth | UIC Magic System</p>
+</header>
 
-<h1>Abbottabad Formula V5.1</h1>
-<h2>From Abbottabad to UNO</h2>
-<p>Policy & Technical Framework for AI Safety Spectrum Governance</p>
-
-<div class="box">
-<p><span class="gold">FORMULA:</span> V5 Haripur → V5.1 Abbottabad FINAL</p>
-<p><span class="gold">1. Funding:</span> Gov 40%, Industry 40%, Grant 20%</p>
-<p><span class="gold">2. Treaty:</span> ITU Art44 Res + Annex</p>
-<p><span class="gold">3. Spectrum:</span> 5G slicing • 5% safety reserve</p>
-<p><span class="gold">4. Kill-Switch:</span> Dead-man 24h heartbeat, 3 of 5 multi-sig (2 Internet + Satellite)</p>
-<p><span class="gold">5. Cost:</span> $2M Abbottabad pilot | <span class="gold">6. Scope:</span> >10^25 FLOPs</p>
+<div class="container">
+<div class="card">
+<h2>Case Summary (UIC)</h2>
+<p>This portal contains all verified screenshots and proofs stored in <b>grok-proofs</b> folder. All data is publicly verifiable via GitHub API for UN submission.</p>
+<p><b>GitHub Repo:</b> drssssherozes-ctrl.github.io | <b>Status:</b> Active & Auto-Updating</p>
 </div>
 
-<h2 style="color:#00FF00;">🏆 ORIGINAL GROK VALIDATION - Auto Gallery</h2>
-<p style="color:#aaa;">Bas image upload karo - khud load ho jayegi - No code needed!</p>
-<p class="gold">Grok x98: YES conceptual 10/10 final locked same as NIST</p>
-
-<!-- YAHAN SARI IMAGES KHUD AA JAYENGI -->
-<div id="gallery"><p style="color:gold;">Loading Grok Proofs... 50 images...</p></div>
-
-<div class="box">
-<p><b>Code:</b> ORIGINAL-GROK-V5-TO-V51-ABBOTTABAD-TO-UNO</p>
-<p style="text-align:center;color:#FFD700;font-weight:bold;">Abbottabad Pilot 2026 | COMSATS University<br>LIVE: https://drssssherozes-ctrl.github.io<br>Pakistan Zindabad - #AbbottabadToUNO</p>
+<div class="card">
+<h2>Live Evidence Gallery - Grok Proofs</h2>
+<div id="gallery" class="proof-grid">Loading proofs from GitHub...</div>
 </div>
+
+<div class="card">
+<h2>How to Verify</h2>
+<p>1. Every image below is directly loaded from <code>github.com/drssssherozes-ctrl/drssssherozes-ctrl.github.io/tree/main/grok-proofs</code><br>
+2. No image is edited - direct GitHub raw link used.<br>
+3. For UN officials: Right-click > Copy Image Address to verify source.</p>
+</div>
+</div>
+
+<div class="footer">© 2026 - Dr. Sheroze Evidence System | Powered by GitHub Pages - UIC Magic Code</div>
 
 <script>
-async function loadImages(){
-  const gallery = document.getElementById('gallery');
-  gallery.innerHTML = '<p style="color:gold;">Loading Grok proofs from 644...</p>';
-  let allImages = [];
-  try {
-    const res1 = await fetch('https://api.github.com/repos/drssssherozes-ctrl/drssssherozes-ctrl.github.io/contents/');
-    const files1 = await res1.json();
-    files1.forEach(f=>{ if(f.name.match(/\.(jpg|jpeg|png)$/i)) allImages.push(f.name); });
-    const res2 = await fetch('https://api.github.com/repos/drssssherozes-ctrl/drssssherozes-ctrl.github.io/contents/grok-proofs');
-    if(res2.ok){
-      const files2 = await res2.json();
-      files2.forEach(f=>{ if(f.name.match(/\.(jpg|jpeg|png)$/i)) allImages.push('grok-proofs/'+f.name); });
-    }
-    gallery.innerHTML = '';
-    allImages.forEach(name=>{
-      const img = document.createElement('img');
-      img.src = name;
-      gallery.appendChild(img);
+async function loadProofs(){
+  const apiUrl="https://api.github.com/repos/drssssherozes-ctrl/drssssherozes-ctrl.github.io/contents/grok-proofs";
+  const gallery=document.getElementById('gallery');
+  try{
+    const res=await fetch(apiUrl);
+    if(!res.ok) throw new Error();
+    const files=await res.json();
+    const images=files.filter(f=>/\.(jpg|jpeg|png|gif|webp|bmp)$/i.test(f.name));
+    if(images.length===0){ gallery.innerHTML="<p>No proofs uploaded yet.</p>"; return; }
+    gallery.innerHTML="";
+    images.reverse().forEach((file,i)=>{
+      const div=document.createElement('div');
+      div.className='proof';
+      div.innerHTML=`<img src="${file.download_url}" loading="lazy" alt="${file.name}"><div class="label">Proof ${images.length-i}: ${file.name}</div>`;
+      gallery.appendChild(div);
     });
-  } catch(e){
-    gallery.innerHTML = '<p>Refresh after 1 min...</p>';
+  }catch(e){
+    gallery.innerHTML="<p style='color:red'>Failed to load. Check if grok-proofs folder is public.</p>";
   }
 }
-loadImages();
-                                                               </script>
-  </script>
+loadProofs();
+</script>
 </body>
 </html>
