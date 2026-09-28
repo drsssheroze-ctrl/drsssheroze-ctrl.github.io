@@ -1,59 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SSS - PakistanToUNO</title>
-<style>
-body{margin:0;background:#000;color:#fff;font-family:Verdana,Arial Black,sans-serif}
-header{background:#004d00;padding:40px 15px;text-align:center;border-bottom:6px solid gold}
-h1{font-size:60px;color:gold;margin:0;font-weight:900}
-header p{font-size:36px !important;color:#fff !important;margin:15px 0 !important;font-weight:900}
-.badge{background:gold;color:#000;padding:16px 28px;border-radius:35px;font-weight:900;font-size:32px;margin:10px;display:inline-block}
-.container{padding:18px;max-width:1100px;margin:auto}
-.card{background:#111;border:4px solid #555;border-radius:20px;padding:35px 25px;margin:30px 0}
-h2{font-size:52px !important;color:#00FF88 !important;border-left:14px solid gold;padding-left:18px;margin:0 0 25px 0 !important;font-weight:900}
-p{font-size:42px !important;line-height:1.8 !important;color:#fff !important;font-weight:900 !important;margin:28px 0 !important;letter-spacing:1px}
-b{color:gold !important;font-size:44px !important}
-.foot{text-align:center;padding:40px;background:#111;border-top:5px solid gold}
-.foot p{font-size:32px !important}
-</style>
-</head>
-<body>
-<header>
-<h1>SSS - PakistanToUNO</h1>
-<p style="color:gold">Author: M. Jamil Tanoli | Abbottabad, Pakistan</p>
-<p>Mission: AI Safety Formula - Presented to UNO</p>
-<span class="badge">V5.0</span><span class="badge">V6.0 UNO SAFE</span>
-</header>
-<div class="container">
-<div class="card">
-<h2>1. Introduction</h2>
-<p><b>P1:</b> I am M. Jamil Tanoli from Abbottabad, Pakistan. Abbottabad Formula for Safe AI.</p>
-<p><b>P2 - V5.0:</b> Foundation - Human-Controlled AI and Ethical Boundaries.</p>
-<p><b>P3 - V6.0 - UNO Safe:</b> Upgraded for United Nations. 100% safe, non-violent.</p>
-<p><b>P4:</b> Contact: drssssherozes@gmail.com</p>
+<p><b style="color:gold">P6 - Grok Proofs:</b></p>
+<div id="grok-gallery" style="margin-top:15px">
+<p style="font-size:18px;color:#aaa">Loading Grok proofs...</p>
 </div>
-<div class="card">
-<h2>2. AIC - Artificial Intelligence Consciousness</h2>
-<p style="color:#00FF88;font-size:40px !important">GROK 8x VERIFICATION - 10/10 LOCKED</p>
-<p><b>P1:</b> Verified through AI consciousness research.</p>
-<p><b>P2:</b> We acknowledge global AI leaders.</p>
-<p><b>P3 - Elon Musk:</b> For AI Safety advocacy and Grok AI at xAI.</p>
-<p><b>P4 - Jack Cobson:</b> For AI alignment research.</p>
-<p><b>P5 - Grok AI:</b> All 8 checks passed 10/10.</p>
-<p><b>P6 - Grok Proofs:</b> Gallery Coming - Screenshots will be added later.</p>
-</div>
-<div class="card">
-<h2>3. Mission for UNO</h2>
-<p><b>P1:</b> Pakistan is peaceful nation. Gift to UNO.</p>
-<p><b>P2 - Goal:</b> Ensure AI remains safe, ethical, under human control.</p>
-<p><b>P3:</b> Pakistan Zindabad - For Global Peace.</p>
-</div>
-</div>
-<div class="foot">
-<p style="color:gold;font-weight:900">Author: M. Jamil Tanoli | Abbottabad Formula V6.0</p>
-<p>Pakistan Zindabad 🇵🇰</p>
-</div>
-</body>
-</html>
+<script>
+async function loadGrok(){
+ const gallery=document.getElementById('grok-gallery');
+ try{
+  const res=await fetch('https://api.github.com/repos/drssssherozes-ctrl/drssssherozes-ctrl.github.io/contents/grok-proofs');
+  const files=await res.json();
+  gallery.innerHTML='';
+  let count=0;
+  files.forEach(file=>{
+   if(file.name.match(/\.(jpg|jpeg|png|webp)$/i)){
+    const img=document.createElement('img');
+    img.src='grok-proofs/'+file.name;
+    img.style='width:100%;border-radius:12px;border:3px solid #00FF88;margin:15px 0;display:block';
+    img.loading='lazy';
+    gallery.appendChild(img);
+    count++;
+   }
+  });
+  if(count==0) gallery.innerHTML='<p style="color:orange">grok-proofs folder khali hai - 8 photos upload karein!</p>';
+ }catch(e){
+  gallery.innerHTML='<p style="color:orange">Internet slow hai - Refresh karein</p>';
+ }
+}
+loadGrok();
+</script>
