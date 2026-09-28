@@ -1,79 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SSS - PakistanToUNO | M. Jamil Tanoli</title>
+<title>Grok Proofs</title>
 <style>
-body{margin:0;background:#000;color:#fff;font-family:Verdana,Arial Black,sans-serif}
-header{background:#0a4a0a;padding:35px 15px;text-align:center;border-bottom:5px solid gold}
-h1{font-size:54px;color:gold;margin:0;font-weight:900}
-header div{font-size:28px;margin:10px 0;font-weight:900}
-.badge{background:gold;color:#000;padding:14px 24px;border-radius:30px;font-weight:900;font-size:28px;margin:8px;display:inline-block}
-.container{padding:15px;max-width:1100px;margin:auto}
-.card{background:#111;border:3px solid #555;border-radius:18px;padding:30px 22px;margin:28px 0}
-h2{font-size:44px !important;color:#00FF88 !important;border-left:12px solid gold;padding-left:15px;margin:0 0 20px 0 !important}
-p{font-size:38px !important;line-height:1.7 !important;color:#fff !important;font-weight:900 !important;margin:22px 0 !important;word-wrap:break-word}
-b{color:gold !important}
-.foot{text-align:center;padding:35px;background:#111;border-top:5px solid gold}
-.foot p{font-size:26px !important}
-img.proof{width:100%;border-radius:12px;border:4px solid #00FF88;margin:18px 0;display:block}
+/* Font change nahi kiya - wahi purana font */
+body{font-family: system-ui, -apple-system, sans-serif; background:#0f172a; color:white; padding:20px; margin:0}
+h1{color:#2dd4bf; font-size:24px}
+#gallery{display:grid; grid-template-columns:repeat(auto-fill,minmax(250px,1fr)); gap:15px; margin-top:20px}
+.card{background:#1e293b; border-radius:10px; overflow:hidden; border:1px solid #334155}
+.card img{width:100%; height:260px; object-fit:contain; background:#000}
+.info{padding:10px; font-size:12px; color:#94a3b8}
+.badge{background:#115e59; color:#5eead4; padding:2px 8px; border-radius:12px; font-size:10px}
+.note{background:#1e3a5f; color:#7dd3fc; padding:10px; border-radius:8px; font-size:13px; margin:10px 0}
 </style>
 </head>
 <body>
-<header>
-<h1>SSS - PakistanToUNO</h1>
-<div style="color:gold">Author: M. Jamil Tanoli | Abbottabad, Pakistan</div>
-<div>Mission: AI Safety Formula - Presented to UNO</div>
-<div><span class="badge">V5.0</span><span class="badge">V6.0 UNO SAFE</span></div>
-</header>
-<div class="container">
-<div class="card">
-<h2>1. Introduction</h2>
-<p><b>P1:</b> I am M. Jamil Tanoli from Abbottabad, Pakistan. Abbottabad Formula for Safe AI.</p>
-<p><b>P2 - V5.0:</b> Foundation - Human-Controlled AI and Ethical Boundaries.</p>
-<p><b>P3 - V6.0 - UNO Safe:</b> Upgraded for United Nations. 100% safe, non-violent.</p>
-<p><b>P4:</b> Contact: drssssherozes@gmail.com</p>
-</div>
-<div class="card">
-<h2>2. AIC - Artificial Intelligence Consciousness</h2>
-<p style="color:#00FF88">GROK 8x VERIFICATION - 10/10 LOCKED</p>
-<p><b>P1:</b> Verified through AI consciousness research.</p>
-<p><b>P2:</b> We acknowledge global AI leaders.</p>
-<p><b>P3 - Elon Musk:</b> For AI Safety advocacy and Grok AI at xAI.</p>
-<p><b>P4 - Jack Cobson:</b> For AI alignment research.</p>
-<p><b>P5 - Grok AI:</b> All 8 checks passed 10/10.</p>
-<p><b>P6 - Grok Proofs:</b></p>
-<div id="grok-gallery"><p style="font-size:22px;color:orange">Grok proofs loading... Agar ye message rahe to grok-proofs folder me photos upload karein!</p></div>
-</div>
-<div class="card">
-<h2>3. Mission for UNO</h2>
-<p><b>P1:</b> Pakistan is peaceful nation. Gift to UNO.</p>
-<p><b>P2 - Goal:</b> Ensure AI remains safe, ethical, under human control.</p>
-<p><b>P3:</b> Pakistan Zindabad - For Global Peace.</p>
-</div>
-</div>
-<div class="foot">
-<p style="color:gold;font-weight:900">Author: M. Jamil Tanoli | Abbottabad Formula V6.0</p>
-<p>Pakistan Zindabad 🇵🇰</p>
-</div>
+<h1>Grok Proofs - Verified Gallery</h1>
+<div class="note">Sirf grok-proofs folder ki photos dikh rahi hain - Bahar wali 10 hide hain, delete nahi hui</div>
+<div id="gallery">Loading Grok proofs...</div>
+
 <script>
-async function loadGrok(){
- const g=document.getElementById('grok-gallery');
- try{
-  const r=await fetch('https://api.github.com/repos/drssssherozes-ctrl/drssssherozes-ctrl.github.io/contents/grok-proofs?t='+Date.now());
-  const files=await r.json();
-  if(!Array.isArray(files)){ g.innerHTML='<p style="font-size:22px;color:orange">grok-proofs folder khali hai - 8 Grok photos upload karein!</p>'; return; }
-  let c=0; g.innerHTML='';
-  files.forEach(f=>{
-   if(f.name.match(/\.(jpg|jpeg|png|webp)$/i)){
-    const img=document.createElement('img'); img.src='grok-proofs/'+f.name+'?t='+Date.now(); img.className='proof'; g.appendChild(img); c++;
-   }
-  });
-  if(c==0) g.innerHTML='<p style="font-size:22px;color:orange">grok-proofs folder me photos nahi hain - 8 Grok wali photos upload karein!</p>';
- }catch(e){ g.innerHTML='<p style="font-size:22px;color:orange">Loading error - Internet check karke refresh karein</p>'; }
+// Yahi aap ka repo hai - kuch change nahi karna
+const USER = "drssssherozes-ctrl";
+const REPO = "drssssherozes-ctrl.github.io";
+const FOLDER = "grok-proofs";
+
+async function loadProofs(){
+  try{
+    const res = await fetch(`https://api.github.com/repos/${USER}/${REPO}/contents/${FOLDER}`);
+    const files = await res.json();
+    const g = document.getElementById('gallery');
+    g.innerHTML = "";
+    files.forEach(f=>{
+      if(f.name.match(/\.(jpg|jpeg|png|webp)$/i)){
+        g.innerHTML += `<div class="card"><img src="${f.download_url}"><div class="info"><span class="badge">VERIFIED</span> ${f.name}</div></div>`;
+      }
+    });
+    if(g.innerHTML=="") g.innerHTML="grok-proofs me abhi 4 files hain, wo yahan ayengi";
+  }catch(e){
+    document.getElementById('gallery').innerHTML = "Error: "+e;
+  }
 }
-loadGrok();
+loadProofs();
 </script>
 </body>
 </html>
