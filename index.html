@@ -1,70 +1,21 @@
 <!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Grok Proofs - Verified Gallery</title>
+<html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Grok Proofs</title>
 <style>
-/* FONT SAME HAI - CHANGE NAHI KIYA */
-body{font-family: system-ui, -apple-system, sans-serif; background:#0f172a; color:white; padding:20px; margin:0}
-h1{color:#2dd4bf; font-size:22px; margin-bottom:5px}
-.note{background:#1e3a5f; color:#7dd3fc; padding:10px; border-radius:8px; font-size:13px; margin:10px 0 20px 0}
-#gallery{display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:16px}
-.card{background:#1e293b; border-radius:12px; overflow:hidden; border:1px solid #334155; transition:0.2s}
-.card:hover{transform:scale(1.02); border-color:#2dd4bf}
-.card img{width:100%; height:auto; min-height:380px; max-height:600px; object-fit:contain; background:#020617; cursor:zoom-in; display:block}
-.info{padding:12px; font-size:12px; color:#94a3b8; display:flex; justify-content:space-between; align-items:center; background:#0f172a}
-.badge{background:#115e59; color:#5eead4; padding:3px 10px; border-radius:12px; font-size:11px; font-weight:bold}
-.btn{color:#38bdf8; font-size:11px; text-decoration:none}
-/* FULL SCREEN ZOOM MODAL */
-#modal{display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.92); z-index:9999; justify-content:center; align-items:center; flex-direction:column}
-#modal img{max-width:95%; max-height:85%; object-fit:contain; border-radius:8px; box-shadow:0 0 30px rgba(45,212,191,0.3)}
-#modal span{color:white; margin-top:15px; background:#1e293b; padding:8px 20px; border-radius:20px; cursor:pointer; font-size:13px; border:1px solid #2dd4bf}
-</style>
-</head>
-<body>
-<h1>Grok Proofs - Verified Gallery</h1>
-<div class="note">✅ Font same hai | ✅ Grok proofs safe hain | ✅ Click to zoom | Bahar wali 10 hide hain</div>
+body{font-family:system-ui,sans-serif;background:#f8fafc;color:#0f172a;padding:10px;margin:0}
+h1{text-align:center;color:#0f172a}
+#gallery{display:flex;flex-direction:column;gap:25px;max-width:700px;margin:auto}
+.card{background:white;border-radius:12px;overflow:hidden;box-shadow:0 4px 15px rgba(0,0,0,0.1);border:2px solid #e2e8f0}
+.card img{width:100%;height:auto;display:block}
+.info{padding:10px;background:#0f172a;color:white;font-size:13px;display:flex;justify-content:space-between}
+</style></head><body>
+<h1>Grok Proofs - Full View</h1>
 <div id="gallery">Loading...</div>
-
-<!-- ZOOM MODAL -->
-<div id="modal" onclick="this.style.display='none'">
-  <img id="modalImg" src="">
-  <span>✕ Close - Band karein</span>
-</div>
-
 <script>
-const USER = "drssssherozes-ctrl";
-const REPO = "drssssherozes-ctrl.github.io";
-const FOLDER = "grok-proofs";
-
-async function loadProofs(){
-  try{
-    const res = await fetch(`https://api.github.com/repos/${USER}/${REPO}/contents/${FOLDER}`);
-    const files = await res.json();
-    const g = document.getElementById('gallery');
-    g.innerHTML = "";
-    files.forEach(f=>{
-      if(f.name.match(/\.(jpg|jpeg|png|webp)$/i)){
-        g.innerHTML += `
-        <div class="card">
-          <img src="${f.download_url}" loading="lazy" onclick="openModal(this.src)">
-          <div class="info">
-            <span class="badge">✓ VERIFIED</span>
-            <span>${f.name.substring(0,20)}</span>
-          </div>
-        </div>`;
-      }
-    });
-  }catch(e){
-    document.getElementById('gallery').innerHTML = "Error: "+e;
-  }
-}
-function openModal(src){
-  document.getElementById('modalImg').src = src;
-  document.getElementById('modal').style.display='flex';
-}
-loadProofs();
-</script>
-</body>
-</html>
+const USER="drssssherozes-ctrl",REPO="drssssherozes-ctrl.github.io",FOLDER="grok-proofs";
+async function load(){
+ const r=await fetch(`https://api.github.com/repos/${USER}/${REPO}/contents/${FOLDER}`);
+ const files=await r.json();
+ const g=document.getElementById('gallery');g.innerHTML="";
+ files.forEach(f=>{if(f.name.match(/png|jpg|jpeg|webp/i)){g.innerHTML+=`<div class="card"><img src="${f.download_url}"><div class="info"><span>✓ VERIFIED</span><span>${f.name}</span></div></div>`}});
+}load();
+</script></body></html>
