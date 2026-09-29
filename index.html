@@ -2,62 +2,38 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>SSS - All Proofs Auto</title>
+<title>SSS Auto</title>
 <style>
-body{background:#001a4d;color:white;font-family:Arial;padding:15px;text-align:center;margin:0}
-h1{color:yellow;font-size:36px;margin:15px 0}
-#count{font-size:22px;color:#90ff90;margin:10px}
-img{width:100%;border:5px solid yellow;border-radius:15px;margin:15px 0;background:#000;min-height:100px}
-.box{background:white;color:black;padding:12px;border-radius:12px;margin:15px 0;font-size:18px;word-break:break-all}
+body{background:#001a4d;color:white;font-family:Arial;padding:15px;text-align:center}
+h1{color:yellow;font-size:32px}
+#count{font-size:20px;color:#90ff90;margin:10px}
+img{width:100%;border:5px solid yellow;border-radius:15px;margin:15px 0}
+.box{background:white;color:black;padding:10px;border-radius:10px;margin-top:25px;word-break:break-all}
 a{color:yellow;font-size:26px;display:block;margin:20px}
-.loading{font-size:28px;color:yellow}
 </style>
 </head>
 <body>
-<h1>SSS - All Proofs (Auto 10/10)</h1>
-<div id="count" class="loading">Loading all screenshots...</div>
+<h1>SSS - Grok Verified Proofs 10/10</h1>
+<div id="count">Loading...</div>
 <div id="gallery"></div>
-<br>
-<a href="index.html">⬅ Back to Home</a>
-
+<a href="index.html">Back to Home</a>
 <script>
-const owner = "drssssherozes-ctrl";
-const repo = "drssssherozes-ctrl.github.io";
-
-async function loadAll() {
-  const gallery = document.getElementById('gallery');
-  const countDiv = document.getElementById('count');
-  try {
-    const res = await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/`);
-    const files = await res.json();
-    const images = files.filter(f => f.name.match(/\.(jpg|jpeg|png|webp)$/i) && f.name !== 'favicon.png');
-    
-    if(images.length === 0){
-      countDiv.innerHTML = "No images found. Please upload screenshots.";
-      return;
-    }
-    
-    countDiv.innerHTML = `Total Proofs Found: ${images.length} - Har screenshot alag alag neeche hai`;
-    
-    images.forEach(file => {
-      const box = document.createElement('div');
-      box.className = 'box';
-      box.innerHTML = `<b>${file.name}</b>`;
-      
-      const img = document.createElement('img');
-      img.src = file.name;
-      img.loading = "lazy";
-      img.onerror = function(){ this.style.display='none'; };
-      
-      gallery.appendChild(box);
-      gallery.appendChild(img);
-    });
-  } catch(e){
-    countDiv.innerHTML = "Error loading. Refresh karo. Internet check karo.";
-    console.log(e);
-  }
+async function load(){
+ const g=document.getElementById('gallery');
+ const c=document.getElementById('count');
+ try{
+  const r=await fetch('https://api.github.com/repos/drssssherozes-ctrl/drssssherozes-ctrl.github.io/contents/');
+  const f=await r.json();
+  const imgs=f.filter(x=>x.name.match(/\.(jpg|jpeg|png)$/i));
+  c.innerHTML='Total Proofs: '+imgs.length;
+  imgs.forEach(file=>{
+    const b=document.createElement('div'); b.className='box'; b.innerText=file.name;
+    const im=document.createElement('img'); im.src=file.name; im.loading='lazy';
+    g.appendChild(b); g.appendChild(im);
+  });
+ }catch(e){ c.innerHTML='Error - Refresh karo'; }
 }
-loadAll();
+load();
 </script>
 </body>
 </html>
