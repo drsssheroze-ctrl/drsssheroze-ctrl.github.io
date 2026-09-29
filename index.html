@@ -4,31 +4,39 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 body{background:#001a4d;color:white;font-family:Arial;padding:10px;text-align:center}
-h1{font-size:45px}
-#box img{width:100%;border:6px solid yellow;border-radius:20px;margin:25px 0;display:block}
-.btn{background:red;color:white;padding:20px;font-size:30px;border:none;border-radius:15px;width:95%;margin:10px}
+h1{font-size:38px;color:yellow}
+img{width:100%;border:5px solid yellow;border-radius:15px;margin:20px 0}
+h2{background:white;color:black;padding:12px;border-radius:10px;font-size:28px}
 </style>
 </head>
 <body>
-<h1>All Proofs - Auto</h1>
-<button class="btn" onclick="loadProofs()">👉 Click to Load All Proofs</button>
-<div id="box"></div>
+<h1>Grok Verified Proofs 10/10</h1>
 
-<script>
-async function loadProofs(){
-  document.getElementById('box').innerHTML = "Loading...";
-  let res = await fetch('https://api.github.com/repos/drssssherozes-ctrl/drssssherozes-ctrl.github.io/contents/');
-  let files = await res.json();
-  let html = "";
-  files.forEach(f=>{
-    if(f.name.match(/\.jpg|\.jpeg|\.png/i) && f.name.toLowerCase().includes('screen')){
-      html += `<h2>${f.name}</h2><img src="${f.name}"><hr>`;
-    }
-  });
-  if(html=="") html = "Koi screenshot nahi mila! Screenshot naam me 'Screenshot' hona chahiye!";
-  document.getElementById('box').innerHTML = html;
-}
-loadProofs();
-</script>
+<h2>Proof 2 - Haripur</h2>
+<img src="proof2.jpg">
+
+<h2>Proof 3</h2>
+<img src="proof3.jpg">
+
+<h2>Proof 4 - Grok Final Locked</h2>
+<img src="proof4.jpg">
+
+<h2>Proof 5</h2>
+<img src="proof5.jpg">
+
+<h2>Proof 6</h2>
+<img src="proof6.jpg">
+
+<h2>Proof 7</h2>
+<img src="proof7.jpg">
+
+<h2>Proof 8 - X.com</h2>
+<img src="proof8.jpg">
+
+<h2>Proof 9 - Final</h2>
+<img src="proof9.jpg">
+
+<br><br>
+<a href="index.html" style="color:yellow;font-size:30px">Back to Home</a>
 </body>
 </html>
