@@ -2,24 +2,62 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SSS - All Proofs Auto</title>
 <style>
-body{background:#001a4d;color:white;font-family:Arial;padding:15px;text-align:center}
-h1{font-size:38px;color:yellow}
-h2{background:white;color:black;padding:12px;border-radius:12px;font-size:26px;margin-top:35px}
-img{width:100%;border:5px solid yellow;border-radius:18px;margin:15px 0}
-a{color:yellow;font-size:28px;display:block;margin:20px}
+body{background:#001a4d;color:white;font-family:Arial;padding:15px;text-align:center;margin:0}
+h1{color:yellow;font-size:36px;margin:15px 0}
+#count{font-size:22px;color:#90ff90;margin:10px}
+img{width:100%;border:5px solid yellow;border-radius:15px;margin:15px 0;background:#000;min-height:100px}
+.box{background:white;color:black;padding:12px;border-radius:12px;margin:15px 0;font-size:18px;word-break:break-all}
+a{color:yellow;font-size:26px;display:block;margin:20px}
+.loading{font-size:28px;color:yellow}
 </style>
 </head>
 <body>
-<h1>SSS - Grok Verified Proofs 10/10</h1>
-
-<h2>Proof 1 - Screenshot</h2>
-<img src="Screenshot_20260929-163744.png">
-
-<h2>Proof 2 - IMG</h2>
-<img src="IMG-20260929-WA3702.jpg">
-
+<h1>SSS - All Proofs (Auto 10/10)</h1>
+<div id="count" class="loading">Loading all screenshots...</div>
+<div id="gallery"></div>
 <br>
 <a href="index.html">⬅ Back to Home</a>
+
+<script>
+const owner = "drssssherozes-ctrl";
+const repo = "drssssherozes-ctrl.github.io";
+
+async function loadAll() {
+  const gallery = document.getElementById('gallery');
+  const countDiv = document.getElementById('count');
+  try {
+    const res = await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/`);
+    const files = await res.json();
+    const images = files.filter(f => f.name.match(/\.(jpg|jpeg|png|webp)$/i) && f.name !== 'favicon.png');
+    
+    if(images.length === 0){
+      countDiv.innerHTML = "No images found. Please upload screenshots.";
+      return;
+    }
+    
+    countDiv.innerHTML = `Total Proofs Found: ${images.length} - Har screenshot alag alag neeche hai`;
+    
+    images.forEach(file => {
+      const box = document.createElement('div');
+      box.className = 'box';
+      box.innerHTML = `<b>${file.name}</b>`;
+      
+      const img = document.createElement('img');
+      img.src = file.name;
+      img.loading = "lazy";
+      img.onerror = function(){ this.style.display='none'; };
+      
+      gallery.appendChild(box);
+      gallery.appendChild(img);
+    });
+  } catch(e){
+    countDiv.innerHTML = "Error loading. Refresh karo. Internet check karo.";
+    console.log(e);
+  }
+}
+loadAll();
+</script>
 </body>
 </html>
