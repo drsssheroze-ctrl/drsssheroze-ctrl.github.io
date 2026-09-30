@@ -1,69 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta <div style="text-align:center; margin:10px;">
-<a href="proofs.html" style="background:#00a651; color:white; padding:12px 20px; border-radius:8px; text-decoration:none; font-weight:bold; display:inline-block;">✅ VIEW ALL 17 OFFICIAL PROOFS - STANDARD RATE</a>
-</div>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SSS Framework - Abbottabad to UNO | Official Record</title>
+<title>SSS Framework - Abbottabad to UNO</title>
 <style>
-body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f4f7fb;color:#222}
+body{margin:0;font-family:Arial,sans-serif;background:#f4f7fb}
 .header{background:#002060;color:#fff;padding:20px;text-align:center}
-.header h1{margin:0;font-size:22px}
-.header p{margin:5px 0 0;font-size:14px;opacity:.9}
 .container{max-width:900px;margin:20px auto;padding:0 12px}
 .status{background:#fff;border-left:5px solid #00a651;padding:12px;border-radius:8px;margin-bottom:15px}
-.status b{color:#00a651}
 .card{background:#fff;border-radius:12px;padding:12px;margin:14px 0;box-shadow:0 2px 8px rgba(0,0,0,.1)}
-.card img{width:100%;border-radius:8px;border:1px solid #ddd}
-.card .name{font-weight:bold;margin:6px 0;font-size:14px}
+.card img{width:100%;border-radius:8px}
 .footer{background:#002060;color:#fff;text-align:center;padding:12px;margin-top:25px;font-size:13px}
-a.btn{display:inline-block;background:#00a651;color:#fff;padding:10px 18px;border-radius:8px;text-decoration:none;font-weight:bold;margin:5px}
+a.btn{display:inline-block;background:#00a651;color:#fff;padding:10px 18px;border-radius:8px;text-decoration:none;font-weight:bold}
 </style>
 </head>
 <body>
 <div class="header">
 <h1>SSS Framework - Abbottabad to UNO</h1>
-<p>Policy & Technical Framework for Global Recognition | Google Verified 11:07 & 11:15 PM</p>
 <p>GROK Rating: 10/10 - Standard Rate Official</p>
 </div>
-
 <div class="container">
-<div class="status">
-<b>✅ STANDARD RATE VERIFIED</b><br>
-Haripur v5.0 | Abbottabad v6.0 FINAL | Abbottabad to UNO - All proofs loaded automatically from GitHub
+<div class="status"><b>✅ STANDARD RATE VERIFIED</b><br>17 Official Proofs - Abbottabad v6 FINAL - UNO Ready</div>
+<div id="proofs" style="text-align:center"><p>Loading 17 Proofs...</p></div>
 </div>
-
-<div style="text-align:center">
-<a class="btn" href="index.html">← Main Page</a>
-<a class="btn" style="background:#002060" href="#proofs">View All Proofs</a>
-</div>
-
-<div id="proofs" style="margin-top:20px;text-align:center"><p>Loading 17 Official Proofs...</p></div>
-</div>
-
-<div class="footer">
-Official Record - drssssherozes-ctrl.github.io | Abbottabad, Pakistan to United Nations
-</div>
-
+<div class="footer">Official Record - drssssherozes-ctrl.github.io</div>
 <script>
 fetch('https://api.github.com/repos/drssssherozes-ctrl/drssssherozes-ctrl.github.io/contents/')
-.then(r=>r.json())
-.then(files=>{
-  let box=document.getElementById('proofs');
-  box.innerHTML='';
-  let count=0;
-  files.forEach(f=>{
-    if(f.name.match(/\.(jpg|jpeg|png)$/i)){
-      count++;
-      box.innerHTML+=`<div class="card"><div class="name">${count}. ${f.name}</div><img src="${f.name}" loading="lazy"></div>`;
-    }
-  });
-  box.innerHTML=`<h3 style="color:#00a651">Total Official Proofs: ${count} Images Found - STANDARD RATE OK</h3>`+box.innerHTML;
+.then(r=>r.json()).then(files=>{
+let box=document.getElementById('proofs');box.innerHTML='';let c=0;
+files.forEach(f=>{if(f.name.match(/\.(jpg|jpeg|png)$/i)){c++;box.innerHTML+=`<div class="card"><b>${c}. ${f.name}</b><br><img src="${f.name}"></div>`;}});
+box.innerHTML=`<h3 style="color:#00a651">Total: ${c} Proofs Found</h3>`+box.innerHTML;
 });
 </script>
 </body>
 </html>
-<div style="text-align:center; margin:10px;">
-<a href="proofs.html" style="background:#00a651; color:white; padding:12px 20px; border-radius:8px; text-decoration:none; font-weight:bold; display:inline-block;">✅ VIEW ALL 17 OFFICIAL PROOFS - STANDARD RATE</a>
-</div>
