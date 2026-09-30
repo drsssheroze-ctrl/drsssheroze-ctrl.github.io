@@ -1,44 +1,11 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>GROK 10/10 PROOFS - AUTO</title>
-<style>
-body{font-family:Arial;margin:10px;background:#f9f9f9;}
-h1{text-align:center;background:yellow;padding:15px;border:3px solid black;}
-.card{background:white;border:2px solid #000;margin:15px 0;padding:10px;border-radius:8px;text-align:center;}
-img{width:100%;max-width:700px;border:2px solid black;margin:10px auto;display:block;}
-.filename{font-weight:bold;background:#eee;padding:5px;}
-</style>
-</head>
-<body>
-<h1>✅ GROK 10/10 PROOFS<br>GOOGLE 11:07 & 11:15 PM<br>Abbottabad to UNO FINAL</h1>
-<p style="text-align:center"><a href="index.html">⬅️ Back to Main Page</a></p>
-<div id="gallery"><p>Loading all proofs... 5 sec wait...</p></div>
-<div class="card" style="background:yellow;border:3px solid red;">
-<b>ABBOTTABAD TO UNO - 29 Sept 2026<br>GOOGLE VERIFIED & GROK 10/10 LOCKED<br>ONE FOR ALL TIME</b>
-</div>
+<h1>TEST OK - GROK 10/10</h1>
+<p>Google 11:07 & 11:15 PM Abbottabad to UNO</p>
+<p>Total proofs loading...</p>
 <script>
-async function loadImages(){
-  const repo = "drssssherozes-ctrl/drssssherozes-ctrl.github.io";
-  const api = `https://api.github.com/repos/${repo}/contents/`;
-  try{
-    const res = await fetch(api);
-    const files = await res.json();
-    let html = ""; let count=0;
-    files.forEach(f=>{
-      if(f.name.match(/\.(jpg|jpeg|png)$/i)){
-        count++;
-        html += `<div class="card"><div class="filename">${count}. ${f.name}</div><img src="${f.name}" loading="lazy"><p>${f.name}</p></div>`;
-      }
-    });
-    document.getElementById("gallery").innerHTML = `<h2 style="background:green;color:white;padding:10px;text-align:center;">Total Proofs Found: ${count}</h2>` + html;
-  }catch(e){
-    document.getElementById("gallery").innerHTML = "<p>Error loading. Refresh karo.</p>";
-  }
-}
-loadImages();
+fetch('https://api.github.com/repos/drssssherozes-ctrl/drssssherozes-ctrl.github.io/contents/')
+.then(r=>r.json()).then(files=>{
+ let c=0; let h='';
+ files.forEach(f=>{ if(f.name.endsWith('jpg')||f.name.endsWith('png')){ c++; h+=`<p>${c}. ${f.name}</p><img src="${f.name}" width="300"><hr>`; } });
+ document.body.innerHTML+=`<h2>Total: ${c}</h2>`+h;
+});
 </script>
-</body>
-</html>
