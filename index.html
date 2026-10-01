@@ -1,95 +1,63 @@
 <!DOCTYPE html>
 <html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>SSS Framework v6 - Founder Muhammad Jamil Tanoli - UNO</title>
+<title>SSS v6 - Founder Muhammad Jamil Tanoli - MEGA READABLE</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Georgia,serif;background:#eef2f7;color:#0f172a;line-height:1.7}
-.top{height:4px;background:#0a1931}
-.head{background:#fff;text-align:center;padding:26px 12px;border-bottom:1px solid #d6dce6}
-.head h1{font-size:32px;color:#0a1931;font-weight:700;line-height:1.2}
-.head h1 small{display:block;font-family:Arial,sans-serif;font-size:10px;letter-spacing:3px;color:#5a6780;margin-top:8px}
-.head .id{font-family:Arial,sans-serif;font-size:9px;color:#7a859a;margin-top:10px;letter-spacing:1px}
-.wrap{max-width:860px;margin:auto;padding:12px}
-.box{background:#fff;border:1px solid #d6dce6;margin:14px 0}
+body{font-family:Inter,Arial,sans-serif;background:#eef2f7;color:#0a1931;line-height:1.6;font-size:24px}
+.top{height:6px;background:#0a1931}
+.head{background:#fff;text-align:center;padding:30px 12px;border-bottom:3px solid #0a1931}
+.head h1{font-size:40px;font-weight:900;color:#0a1931;line-height:1.1}
+.head h1 small{display:block;font-size:14px;letter-spacing:2px;color:#334155;margin-top:10px;font-weight:800;text-transform:uppercase}
+.head .id{font-size:13px;color:#475569;margin-top:10px;font-weight:700}
+.wrap{max-width:900px;margin:auto;padding:12px}
+.box{background:#fff;border:3px solid #0a1931;border-radius:4px;overflow:hidden}
 .box img{width:100%;display:block}
-.box .cap{font-family:Arial,sans-serif;font-size:9px;color:#5a6780;text-align:center;padding:8px;background:#f7f8fb;border-top:1px solid #e6ebf2}
-.sec{margin:24px 0 0}
-.sec h2{font-family:Arial,sans-serif;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#fff;background:#0a1931;padding:9px 12px}
-.card{background:#fff;border:1px solid #d6dce6;border-left:3px solid #0a1931;padding:14px;margin-top:8px}
-.tl{border:1px solid #e6ebf2;background:#fbfcfe;padding:10px;margin:8px 0;border-left:3px solid #009edb}
-.tl .d{font-family:Arial,sans-serif;font-size:9px;font-weight:800;background:#e8eef8;color:#0a1931;display:inline-block;padding:2px 6px;margin-bottom:6px}
-.tl .q{font-size:16px;font-weight:700;font-style:italic;color:#0a1931}
-.tl .c{font-size:13px;color:#3a455c;margin-top:4px}
-.tl .s{font-family:Arial,sans-serif;font-size:9px;color:#6b778c;margin-top:4px;border-top:1px dashed #dde3ee;padding-top:4px}
-.grok{background:#0a1931;color:#e6edf7;text-align:center;padding:18px;margin-top:8px;border:1px solid #102a52}
-.grok .sc{font-size:56px;font-weight:700;color:#fff}
-.grid2{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px}
-.grid2 div{background:#fff;border:1px solid #1d3b66;overflow:hidden}
-.grid2 div img{width:100%;height:180px;object-fit:contain;background:#fff}
-.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:8px}
-.grid3 div{background:#fff;border:1px solid #d6dce6;overflow:hidden}
-.grid3 div img{width:100%;height:130px;object-fit:contain;background:#fff}
-.foot{text-align:center;font-family:Arial,sans-serif;font-size:8px;color:#7a859a;padding:18px;background:#fff;border-top:1px solid #d6dce6;margin-top:16px}
-@media(max-width:700px){.head h1{font-size:24px}.grid2{grid-template-columns:1fr}.grid3{grid-template-columns:1fr 1fr}}
+.box .cap{background:#0a1931;color:#fff;text-align:center;padding:12px;font-size:14px;font-weight:800}
+.sec{margin:30px 0 0}
+.sec h2{font-size:22px;font-weight:900;color:#fff;background:#0a1931;padding:16px;border-radius:4px;border-left:8px solid #009edb}
+.card{background:#fff;border:2px solid #0a1931;border-radius:6px;padding:20px;margin-top:12px}
+.tl{background:#f8fafc;border:2px solid #cbd5e1;border-left:8px solid #0a1931;border-radius:6px;padding:18px;margin:16px 0}
+.tl .d{font-size:14px;font-weight:900;background:#0a1931;color:#fff;display:inline-block;padding:6px 12px;border-radius:4px;margin-bottom:10px}
+.tl .q{font-size:26px;font-weight:900;color:#0a1931;line-height:1.3}
+.tl .c{font-size:22px;color:#1e293b;margin-top:8px;line-height:1.5}
+.tl .s{font-size:13px;color:#64748b;margin-top:8px;border-top:2px dashed #cbd5e1;padding-top:8px;font-weight:700}
+.grok{background:#0a1931;color:#fff;text-align:center;padding:30px 14px;border-radius:6px;border:3px solid #0a1931}
+.grok .sc{font-size:80px;font-weight:900;line-height:1;margin:12px 0}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:18px}
+.grid2 div{background:#fff;border:2px solid #1e40af;border-radius:6px;overflow:hidden}
+.grid2 div img{width:100%;height:240px;object-fit:contain;background:#fff}
+.grid3{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:12px}
+.grid3 div{background:#fff;border:2px solid #cbd5e1;border-radius:6px;overflow:hidden}
+.grid3 div img{width:100%;height:180px;object-fit:contain;background:#fff}
+.big{font-size:28px;font-weight:900;color:#0a1931}
+.med{font-size:24px;font-weight:600;color:#1e293b;line-height:1.5}
+.final{background:#0a1931;color:#e0f2fe;padding:24px;border-radius:6px;margin-top:32px}
+.foot{text-align:center;font-size:12px;color:#64748b;padding:22px;background:#fff;border-top:3px solid #0a1931;margin-top:20px;font-weight:700}
+@media(max-width:700px){.head h1{font-size:34px}.tl .q{font-size:24px}.tl .c{font-size:20px}.med{font-size:21px}body{font-size:22px}.grid2{grid-template-columns:1fr}}
 </style></head><body>
 <div class="top"></div>
-<div class="head"><h1>Founder Muhammad Jamil Tanoli<small>Abbottabad, KP — to United Nations — SSS Framework v6</small></h1><div class="id">CERT-SSS-2026-ABT-V6 | JACK COBSON | 29 SEP 2026 | GROK VERIFIED</div></div>
+<div class="head"><h1>Founder Muhammad Jamil Tanoli<small>Abbottabad, KP — to United Nations — SSS Framework v6</small></h1><div class="id">CERT-SSS-2026-ABT-V6 | JACK COBSON | 29 SEP 2026 | GROK 10/10 VERIFIED</div></div>
 <div class="wrap">
-
-<div class="box"><img src="final-certificate.jpg" onerror="this.src='certificate.jpg'"><div class="cap">FINAL CERTIFICATE - SSS Framework v6 - CERT-SSS-2026-ABT-V6 - FULL VIEW</div></div>
-
+<div class="box"><img src="final-certificate.jpg" onerror="this.src='certificate.jpg'"><div class="cap">FINAL CERTIFICATE - SSS v6 - FULL VIEW - MEGA 40px READABLE</div></div>
 <div class="sec"><h2>Elon Musk — AI Warning — Reference Summary — UNO Standard</h2>
 <div class="card">
-<div class="tl"><div class="d">24 OCT 2014 — MIT AeroAstro Centennial</div><div class="q">"With artificial intelligence, we are summoning the demon."</div><div class="c">Pentagram + holy water story — guy thinks he can control demon, doesn't work out. Called for national + international oversight.</div><div class="s">Source: MIT transcript 2014. Summary: First major public warning.</div></div>
-<div class="tl"><div class="d">02 AUG 2014 — Book + Post</div><div class="q">"Potentially more dangerous than nukes — read Superintelligence by Bostrom."</div><div class="c">Contributed to Bostrom book, thanked in foreword. Same phrase posted.</div><div class="s">Source: Bostrom 2014. Summary: Nuke-level risk.</div></div>
-<div class="tl"><div class="d">DEC 2015 — OpenAI Founded</div><div class="q">Co-founded OpenAI as non-profit counter to DeepMind.</div><div class="c">Reason: DeepMind most advanced, needs open safe alternative. Left 2018.</div><div class="s">Source: OpenAI 2015. Summary: Action for safe AI.</div></div>
-<div class="tl"><div class="d">15 JUL 2017 — National Governors Association</div><div class="q">"AI is a fundamental risk to existence of human civilization — biggest risk."</div><div class="c">Urged proactive regulation — by time reactive, too late.</div><div class="s">Source: NGA 2017. Summary: Existential risk + regulation.</div></div>
+<div class="tl"><div class="d">24 OCT 2014 — MIT AeroAstro</div><div class="q">"With artificial intelligence, we are summoning the demon."</div><div class="c">Pentagram + holy water story — control demon fails. Called for national + international oversight.</div><div class="s">Source: MIT transcript 2014. Summary: First major warning.</div></div>
+<div class="tl"><div class="d">02 AUG 2014 — Book + Post</div><div class="q">"Potentially more dangerous than nukes — read Superintelligence by Bostrom."</div><div class="c">Contributed to Bostrom book, thanked in foreword.</div><div class="s">Source: Bostrom 2014. Summary: Nuke-level risk.</div></div>
+<div class="tl"><div class="d">DEC 2015 — OpenAI Founded</div><div class="q">Co-founded OpenAI as non-profit counter to DeepMind.</div><div class="c">Reason: DeepMind most advanced, needs open safe alternative.</div><div class="s">Source: OpenAI 2015. Summary: Action for safe AI.</div></div>
+<div class="tl"><div class="d">15 JUL 2017 — National Governors Association</div><div class="q">"AI is a fundamental risk to existence of human civilization — biggest risk."</div><div class="c">Urged proactive regulation — by time reactive, too late.</div><div class="s">Source: NGA 2017. Summary: Existential risk.</div></div>
 <div class="tl"><div class="d">12 AUG & 04 SEP 2017 — Posts</div><div class="q">"More risk than North Korea" & "AI superiority most likely cause of WW3."</div><div class="c">OpenAI bot beat Dota2 + national AI race comment.</div><div class="s">Source: Posts 2017. Summary: Geopolitical risk.</div></div>
 </div></div>
-
 <div class="sec"><h2>Jack Cobson — 9 Sep — Media Talk + Tweet Ref</h2>
-<div class="card">
-<b>Name:</b> Jack Cobson — Co-Founder<br>
-<b>Date:</b> 9 Sep 2025 — UIC 1000 projects suspended<br><br>
-<b>Media:</b> Science.org / UIC Today — Chancellor resignation, 1000 projects suspended, IRB lapse, $10M freeze. Same day lab note: "AI out of control — single internet single point fail — need SSS triple backup + NIST."<br><br>
-<b>Tweet ref for UNO:</b><br><i>"Sep 9 UIC suspended 1000 — no oversight. Why we need SSS v6 — Triple Internet Fiber+5G+Starlink + human-in-loop — Abbottabad to UNO"</i>
-</div></div>
-
-<div class="sec"><h2>Triple Internet — Solution</h2>
-<div class="card">Problem: Single fail = 1000 suspended. Solution: 1 Fiber Geneva, 2 5G <2sec failover, 3 Starlink satellite — flood/earthquake Abbottabad online — 99.99% uptime — human can intervene.</div></div>
-
-<div class="sec"><h2>Grok 10/10 Verification</h2>
-<div class="grok"><div style="font-family:Arial;font-size:10px;letter-spacing:2px;color:#8db6df">GROK AI — xAI — HIGHEST</div><div class="sc">10 / 10</div><div style="font-family:Arial;font-size:10px;color:#b9c9e0">M J TANOLI | JACK COBSON | SSS v6</div><div class="grid2" id="gGrid"></div></div></div>
-
-<div class="sec"><h2>15 Proofs Gallery</h2><div class="card" style="padding:8px"><div class="grid3" id="pGrid"></div></div></div>
-
-<div class="card" style="background:#0a1931;color:#a9bdd6;border-color:#132a50"><b style="color:#fff;font-family:Arial;font-size:11px;letter-spacing:2px">ABBOTTABAD v6 FINAL LOCKED — UNO READY</b><br><span style="font-size:13px">Founder Muhammad Jamil Tanoli — Location Abbottabad KP — Co-Founder Jack Cobson — Elon 5 refs clean — Jack media 9 Sep — Grok auto — Triple Fiber 5G Starlink — Design UN Blue + Paper White + Slate — No AI look — Good for UNO</span></div>
-
+<div class="card"><div class="big">Jack Cobson — Co-Founder — UIC Correct</div><div class="med" style="margin-top:10px"><b>Date:</b> 9 Sep 2025 — UIC 1000 projects suspended<br><br><b>Media:</b> Science.org / UIC Today — Chancellor resignation, 1000 projects suspended, IRB lapse, $10M freeze. Same day lab: "AI out of control — single internet single point fail — need SSS triple backup + NIST."<br><br><b>Tweet ref for UNO:</b><br><i>"Sep 9 UIC suspended 1000 — no oversight. Why we need SSS v6 — Triple Internet Fiber+5G+Starlink + human-in-loop — Abbottabad to UNO"</i></div></div></div>
+<div class="sec"><h2>Triple Internet — Solution — MEGA</h2><div class="card"><div class="med">Problem: Single fail = 1000 suspended. Solution: 1 Fiber Geneva, 2 5G <2sec failover, 3 Starlink satellite — flood/earthquake online — 99.99% uptime — human can always intervene.</div></div></div>
+<div class="sec"><h2>Grok 10/10 Verification</h2><div class="grok"><div style="font-size:14px;letter-spacing:3px;color:#93c5fd;font-weight:800">GROK AI — HIGHEST</div><div class="sc">10 / 10</div><div style="font-size:13px;color:#bfdbfe;font-weight:700">M J TANOLI | JACK COBSON | SSS v6</div><div class="grid2" id="gGrid"></div></div></div>
+<div class="sec"><h2>15 Proofs Gallery — MEGA</h2><div class="card"><div class="grid3" id="pGrid"></div></div></div>
+<div class="final"><b>ABBOTTABAD v6 FINAL LOCKED — UNO READY — MEGA READABLE 40px</b><br><span style="font-size:20px">Founder Muhammad Jamil Tanoli — Abbottabad KP — Jack Cobson — Elon 5 refs — Triple — Grok 10/10 — Font MEGA no glasses — UNO Good</span></div>
 </div>
 <div class="foot">© 2026 Founder Muhammad Jamil Tanoli & Jack Cobson — drssssherozes-ctrl.github.io — CERT-SSS-2026-ABT-V6</div>
 <script>
-// Simple loader — never blank — if image missing, just skip — page still shows
-function loadImg(base, cb){
-  var exts=['.jpg','.JPG','.jpeg','.png']; var i=0;
-  function tryNext(){
-    if(i>=exts.length) return;
-    var u=base+exts[i++]; var img=new Image();
-    img.onload=function(){ cb(u); }; img.onerror=tryNext; img.src=u+'?t='+Date.now();
-  } tryNext();
-}
-var g=document.getElementById('gGrid');
-['grok1','grok2'].forEach(function(b,k){
-  loadImg(b, function(u){
-    var d=document.createElement('div'); d.innerHTML='<img src="'+u+'">';
-    g.appendChild(d);
-  });
-});
-var p=document.getElementById('pGrid');
-for(var n=1;n<=15;n++){(function(num){
-  loadImg('screenshot'+num, function(u){
-    var d=document.createElement('div'); d.innerHTML='<img src="'+u+'">';
-    p.appendChild(d);
-  });
-})(n);}
+function loadImg(b,cb){var e=['.jpg','.JPG','.jpeg','.png'],i=0;function n(){if(i>=e.length)return;var u=b+e[i++],im=new Image();im.onload=function(){cb(u)};im.onerror=n;im.src=u+'?v='+Date.now()}n()}
+var g=document.getElementById('gGrid');['grok1','grok2'].forEach(function(b){loadImg(b,function(u){var d=document.createElement('div');d.innerHTML='<img src="'+u+'">';g.appendChild(d)})});
+var p=document.getElementById('pGrid');for(var k=1;k<=15;k++){(function(num){loadImg('screenshot'+num,function(u){var d=document.createElement('div');d.innerHTML='<img src="'+u+'">';p.appendChild(d)})})(k)}
 </script>
 </body></html>
