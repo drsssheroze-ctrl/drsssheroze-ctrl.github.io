@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>V36 FINAL CLEAN - No Mix Up</title>
+<title>V38 FINAL - Certificate Finder</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-body{font-family:Arial;background:#000;color:#fff;padding:12px;margin:0}
-.top{border:3px solid #0f0;background:#001100;padding:18px;border-radius:12px;text-align:center}
-.pillar{border:2px solid #e74c3c;margin:18px 0;padding:15px;border-radius:10px;background:#111}
-.summary{background:#1e1e1e;padding:12px;border-left:5px solid #0f0;text-align:left;line-height:1.6;margin:10px 0}
-h2{color:#ff0}
-a{color:#0ff;display:block;margin:6px 0;font-weight:bold}
-img{width:100%;max-width:580px;margin:12px auto;display:block;border:2px solid #666;border-radius:8px}
+body{font-family:Arial;background:#000;color:#fff;padding:10px;margin:0;font-size:19px;line-height:1.6}
+.top{border:3px solid #0f0;background:#001a00;padding:20px;border-radius:14px;text-align:center}
+.pillar{border:3px solid #e74c3c;margin:20px 0;padding:18px;border-radius:12px;background:#111}
+.pillar2{border:3px solid #3498db;margin:20px 0;padding:18px;border-radius:12px;background:#0a0a1a}
+.cert{border:3px solid #ff0;margin:20px 0;padding:18px;border-radius:12px;background:#1a1a00;text-align:center}
+.summary{background:#222;padding:14px;border-left:6px solid #0f0;text-align:left}
+h1{font-size:26px} h2{font-size:22px;color:#ff0}
+a{color:#0ff;display:block;margin:7px 0;font-weight:bold;word-break:break-all}
+img{width:100%;max-width:600px;margin:12px auto;display:block;border:3px solid #555;border-radius:10px}
 </style>
 </head>
 <body>
@@ -18,39 +20,71 @@ img{width:100%;max-width:580px;margin:12px auto;display:block;border:2px solid #
 <div class="top">
 <h1>ABBOTTABAD TO UNO</h1>
 <h2 style="color:#fff">AI SAFETY - UIC EXECUTIVE PRESENTATION</h2>
-<p>Dr. Sheroze Butt | UIC 2014-2016 | For Humanity</p>
+<p>Dr. Sheroze Butt | UIC 2014-2016</p>
 <div class="summary">
 <b>30 SECOND SUMMARY:</b><br>
-1. Lab insiders believe AI could kill us all by end of decade.<br>
-2. Proof: Jacob Coxon - 12.7M + 26M views - Blue Tick - BBC.<br>
+1. Lab insiders: AI could kill us all by end of decade.<br>
+2. Proof: Jacob Coxon - 12.7M + 26M - Blue Tick - BBC.<br>
 3. Warning: Hugging Face attack = First shot.<br>
 4. Solution: Pacing agreement - Temporary ban.<br>
 </div>
 </div>
 
-<div class="pillar">
-<h2>PRIMARY EVIDENCE - JACOB COXON - ONLY 4 CLEAN SHOTS</h2>
-<a href="https://x.com/hilbertspaess" target="_blank">✓ Verified Profile @hilbertspaess</a>
-<a href="https://x.com/hilbertspaess/status/1965210000000000000" target="_blank">✓ Direct Tweet 12.7M Views</a>
-<a href="https://www.bbc.com/news/articles/ckgwy1k42w4o" target="_blank">✓ BBC Coverage</a>
-
-<p><b>Evidence 1 - 12.7M - Do not underestimate power:</b></p>
-<img src="IMG-20261002-WA2746.jpg">
-
-<p><b>Evidence 2 - 26M - Could kill us all by end of decade:</b></p>
-<img src="IMG-20261002-WA2792.jpg">
-
-<p><b>Evidence 3 - Hubristic gamble - Endgame:</b></p>
-<img src="IMG-20261002-WA7905.jpg">
-
-<p><b>Evidence 4 - Pacing agreement - Temporary ban:</b></p>
-<img src="IMG-20261002-WA0531.jpg">
-
+<div class="cert" id="certBox">
+<h2 style="color:#ff0">CERTIFICATE - UIC</h2>
+<p>Loading certificate... If not found, please check files from 29 Sep</p>
 </div>
 
+<div class="pillar">
+<h2>PILLAR 1 - COXON - 4 CLEAN SHOTS - BIG FONT</h2>
+<a href="https://x.com/hilbertspaess" target="_blank">✓ Verified @hilbertspaess</a>
+<a href="https://x.com/hilbertspaess/status/1965210000000000000" target="_blank">✓ 12.7M Tweet</a>
+<a href="https://www.bbc.com/news/articles/ckgwy1k42w4o" target="_blank">✓ BBC</a>
+<p><b>Evidence 1 - 12.7M:</b></p><img src="IMG-20261002-WA2746.jpg">
+<p><b>Evidence 2 - 26M:</b></p><img src="IMG-20261002-WA2792.jpg">
+<p><b>Evidence 3 - Endgame:</b></p><img src="IMG-20261002-WA7905.jpg">
+<p><b>Evidence 4 - Pacing:</b></p><img src="IMG-20261002-WA0531.jpg">
+</div>
+
+<div class="pillar2">
+<h2>PILLAR 2 - GROK - 11 REMAINING (16-5)</h2>
+<div id="grokBox">Loading remaining 11 Grok shots...</div>
+</div>
+
+<script>
+// V38 - Certificate + Grok auto finder
+async function loadAll(){
+ try{
+  const r = await fetch('https://api.github.com/repos/drssssherozes-ctrl/drssssherozes-ctrl.github.io/contents?'+Date.now());
+  const files = await r.json();
+  const all = files.filter(f=>f.name.match(/\.jpg|\.png/i)).map(f=>f.name);
+  
+  // Certificate finder - 29 Sep wale ya cert naam wale
+  const certFiles = all.filter(n=> n.toLowerCase().includes('cert') || n.includes('20260929') || n.includes('20260928') );
+  let certHtml = "";
+  if(certFiles.length>0){
+    certFiles.slice(0,2).forEach(n=> certHtml += `<img src="${n}?v=${Date.now()}"><p>${n}</p>`);
+  }else{
+    certHtml = `<p style="color:#f00">Certificate file nahi mila - 29 Sep wale files mein se ek certificate hai - Please usko rename karke certificate.jpg rakho</p><p>Available files: ${all.slice(0,5).join(', ')}</p>`;
+  }
+  document.getElementById('certBox').innerHTML = `<h2 style="color:#ff0">CERTIFICATE - FOUND ${certFiles.length}</h2>` + certHtml;
+
+  // Grok remaining finder - Screenshot_ wale
+  const grokFiles = all.filter(n=> n.toLowerCase().includes('screenshot'));
+  let grokHtml = `<p>Total Grok remaining: ${grokFiles.length} (16-5=${grokFiles.length})</p>`;
+  grokFiles.slice(0,6).forEach(n=> grokHtml += `<p>${n}</p><img src="${n}?v=${Date.now()}" onerror="this.style.display='none'">`);
+  document.getElementById('grokBox').innerHTML = grokHtml;
+
+ }catch(e){
+  document.getElementById('certBox').innerHTML = "Error loading - Refresh";
+ }
+}
+loadAll();
+</script>
+
 <div class="top">
-<h2 style="color:#0f0">FOR HUMANITY - ALLAH CERTIFICATE DE GA</h2>
-<p>V36 FINAL - 4 Clean Shots - No Mix Up - 02 OCT 2026</p>
+<h2 style="color:#0f0">FOR HUMANITY - 5 DELETED - SPACE FOR CERTIFICATE - V38</h2>
+<p>02 OCT 2026 - ABBOTTABAD TO UNO</p>
 </div>
 
 </body>
