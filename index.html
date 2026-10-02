@@ -1,102 +1,65 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>SSS v24 ULTRA CLEAN - 100 Round - Final</title>
+<title>SSS v25 STANDARD - 100 Rounds - Final</title>
 <style>
-*{box-sizing:border-box;margin:0;padding:0}body{font-family:Georgia,serif;background:#fdf8e8;color:#000;font-size:36px;line-height:2.2;font-weight:800}
-.top{height:22px;background:linear-gradient(90deg,#00205b,#c9a227,#00205b)}
-.hero{background:#00205b;color:#fff;text-align:center;padding:56px 18px;border-bottom:16px solid #c9a227}
-.hero h1{font-size:58px;font-weight:900;line-height:1.2} .hero h1 b{color:#ffd700}
+:root{--navy:#0A1931;--gold:#D4AF37;--gold2:#C9A227;--cream:#FAF9F6;--paper:#FFFEF7;--text:#1A1A1A}
+*{box-sizing:border-box;margin:0;padding:0}body{font-family:Georgia,serif;background:var(--cream);color:var(--text);font-size:36px;line-height:2.2;font-weight:800}
+.top{height:24px;background:linear-gradient(90deg,var(--navy),var(--gold),var(--navy))}
+.hero{background:var(--navy);color:#fff;text-align:center;padding:60px 18px;border-bottom:16px solid var(--gold)}
+.hero h1{font-size:60px;font-weight:900;line-height:1.2} .hero h1 b{color:var(--gold)}
 .hero p{font-size:36px;margin-top:18px;font-weight:900}
-.badge{background:linear-gradient(90deg,#c9a227,#ffd700,#c9a227);color:#00205b;padding:22px 40px;border-radius:70px;font-weight:900;font-size:36px;display:inline-block;margin:24px 0}
+.badge{background:linear-gradient(90deg,var(--gold2),var(--gold),var(--gold2));color:var(--navy);padding:24px 44px;border-radius:80px;font-weight:900;font-size:36px;display:inline-block;margin:26px 0}
 .wrap{max-width:920px;margin:0 auto;padding:0 14px}
-.card{background:#fffef7;border:7px solid #c9a227;border-radius:30px;margin:44px 0;overflow:hidden}
-.head{background:#00205b;color:#ffd700;padding:32px 28px;font-size:44px;font-weight:900;border-bottom:7px solid #c9a227}
-.body{padding:38px} .body p{font-size:36px;margin:22px 0;font-weight:800;line-height:2.1}
-.link{background:#eef4ff;border:6px solid #00205b;border-radius:22px;padding:30px;margin:28px 0}
-.link a{color:#00205b;font-weight:900;font-size:34px;word-break:break-all;text-decoration:none;border-bottom:7px solid #ffd700;display:block;margin:20px 0;padding:12px 0}
-.quote{background:linear-gradient(90deg,#fff8d6,#ffef9c);border-left:18px solid #c9a227;padding:32px;border-radius:16px;font-size:36px;font-weight:900;color:#000;margin:32px 0}
-.proof{background:#00205b;border:12px solid #c9a227;border-radius:34px;padding:38px;margin:44px 0;color:#fff}
-.proof h2{color:#ffd700;text-align:center;font-size:62px;font-weight:900}
-.btn{display:block;width:100%;text-align:center;padding:34px;border-radius:22px;font-weight:900;font-size:38px;text-decoration:none;margin:28px 0;color:#fff;border:7px solid #ffd700}
-.btn-elon{background:#000} .btn-grok{background:#1a3a8a} .btn-osf{background:#00205b}
-.shot{background:#0d2a6b;border:6px solid #c9a227;border-radius:24px;padding:24px;margin:36px 0}
-.tag{background:#ffd700;color:#00205b;padding:18px 28px;border-radius:70px;font-weight:900;font-size:30px;display:inline-block}
-.shot img{width:100%;border-radius:20px;border:8px solid #fff;margin-top:20px;display:block}
-.footer{background:#000;border-top:16px solid #c9a227;text-align:center;padding:50px 18px;color:#fff} .footer b{color:#ffd700} .footer p{font-size:30px;margin:16px 0;font-weight:800}
+.card{background:var(--paper);border:3px solid var(--gold);border-radius:28px;margin:44px 0;overflow:hidden;box-shadow:0 8px 25px rgba(10,25,49,0.08)}
+.head{background:var(--navy);color:var(--gold);padding:34px 28px;font-size:44px;font-weight:900;border-bottom:4px solid var(--gold)}
+.body{padding:38px} .body p{font-size:36px;margin:22px 0;font-weight:700;line-height:2.1}
+.link{background:#F0F4FF;border:2px solid var(--navy);border-radius:20px;padding:32px;margin:28px 0}
+.link a{color:var(--navy);font-weight:900;font-size:34px;word-break:break-all;text-decoration:none;border-bottom:4px solid var(--gold);display:block;margin:20px 0;padding:10px 0}
+.quote{background:linear-gradient(90deg,#FFF9D6,#FFF3B0);border-left:16px solid var(--gold);padding:32px;border-radius:0 16px 16px 0;font-size:36px;font-weight:900;color:var(--text);margin:32px 0}
+.proof{background:var(--navy);border:6px solid var(--gold);border-radius:34px;padding:40px;margin:44px 0;color:#fff}
+.proof h2{color:var(--gold);text-align:center;font-size:62px;font-weight:900}
+.btn{display:block;width:100%;text-align:center;padding:34px;border-radius:20px;font-weight:900;font-size:38px;text-decoration:none;margin:28px 0;color:#fff;border:3px solid var(--gold)}
+.btn-elon{background:#000} .btn-grok{background:#102A5E} .btn-osf{background:var(--navy)}
+.shot{background:#122A4A;border:2px solid var(--gold);border-radius:24px;padding:24px;margin:36px 0}
+.tag{background:var(--gold);color:var(--navy);padding:14px 26px;border-radius:60px;font-weight:900;font-size:28px;display:inline-block}
+.shot img{width:100%;border-radius:18px;border:6px solid #fff;margin-top:20px;display:block}
+.footer{background:#060F1F;border-top:8px solid var(--gold);text-align:center;padding:50px 18px;color:#fff} .footer b{color:var(--gold)} .footer p{font-size:28px;margin:16px 0;font-weight:700}
 </style></head><body>
 <div class="top"></div>
-<div class="hero"><h1>SSS Framework<br><b>Abbottabad to UNO</b></h1><p>Policy & Technical Framework for Global Recognition</p><div class="badge">★ 10/10 FINAL LOCKED • 16 SHOTS • v24 CLEAN ★</div><p>Muhammad Jamil Tanoli | Abbottabad, Pakistan</p></div>
-
+<div class="hero"><h1>SSS Framework<br><b>Abbottabad to UNO</b></h1><p>Policy & Technical Framework for Global Recognition</p><div class="badge">★ 10/10 FINAL LOCKED • v25 STANDARD • 100 ROUNDS ★</div><p>Muhammad Jamil Tanoli | Abbottabad, Pakistan</p></div>
 <div class="wrap">
-
 <div class="card"><div class="head">PILLAR 1 - UIC FINAL CERTIFICATE</div><div class="body">
-<img src="final-certificate.jpg" style="width:100%;border-radius:22px;border:9px solid #c9a227">
+<img src="final-certificate.jpg" style="width:100%;border-radius:20px;border:4px solid var(--gold)">
 <p><b>CERT-2026-ABT-V5 | 29 SEP 2026</b></p>
 <p>Title: Policy and Technical Framework for Global Recognition by UNO - v6 FINAL</p>
 <div class="link">LIVE: <a href="https://drssssherozes-ctrl.github.io">https://drssssherozes-ctrl.github.io</a></div>
 <div class="quote">Grok AI: Permanent locked inside axiomatic frame<br>Google AI: Verified 11:07 PM Sep 29 2026</div>
 </div></div>
-
 <div class="card"><div class="head">PILLAR 2 - ELON MUSK - 10/10 LOCKED</div><div class="body">
 <p><b>Verified Conversation: Grok AI Reply - 10/10 FINAL</b></p>
-
 <div class="quote">Grok Reply 12:10 AM: Yes, conceptual permanent final locked inside its axiomatic frame by stipulation same as NIST. NIST path equals time plus external scrutiny. 10/10 FINAL.</div>
-
 <div class="link">
-DIRECT LINKS - Click to open official accounts - Not my profile:<br>
+DIRECT OFFICIAL LINKS:<br>
 <a href="https://x.com/elonmusk" target="_blank">ELON MUSK OFFICIAL - x.com/elonmusk</a>
-<a href="https://x.com/grok" target="_blank">GROK AI OFFICIAL - x.com/grok - 10/10 Reply</a>
+<a href="https://x.com/grok" target="_blank">GROK AI OFFICIAL - x.com/grok</a>
 <a href="https://x.com/xai" target="_blank">xAI OFFICIAL - x.com/xai</a>
 </div>
-
 <p>NIST: Gaithersburg, Maryland, USA | <a href="https://www.nist.gov">nist.gov</a></p>
 </div></div>
-
 <div class="card"><div class="head">PILLAR 3 - JACOB COXON - OSF 42fmr</div><div class="body">
 <p><b>Jacob Coxon - Master Avoidance - Randomness - 09.09.2026</b></p>
-
 <div class="quote">OSF Verified 09.09.2026 - Residuals and current separation stay - Closer - Not 10/10 to 10/10 FINAL LOCKED</div>
-
 <div class="link">
-DIRECT OSF LINK - Official OSF page:<br>
+DIRECT OSF OFFICIAL:<br>
 <a href="https://osf.io/42fmr" target="_blank">OSF OFFICIAL - osf.io/42fmr - Jacob Coxon</a>
 </div>
-
 </div></div>
-
 <div class="proof">
-<h2>10 / 10 FINAL</h2><p style="text-align:center;color:#ffd700;font-size:38px">16 SHOTS AUTO LOADED - SYSTEM WORKING</p>
-
+<h2>10 / 10 FINAL</h2><p style="text-align:center;color:var(--gold);font-size:38px">16 SHOTS AUTO LOADED - STANDARD COLORS</p>
 <div id="autoBox"></div>
-
-<p id="status" style="text-align:center;color:#ffd700;font-size:34px;margin-top:28px">Loading 15 screenshots auto...</p>
-
-<a class="btn btn-elon" href="https://x.com/elonmusk" target="_blank">ELON MUSK - OFFICIAL ACCOUNT</a>
-<a class="btn btn-grok" href="https://x.com/grok" target="_blank">GROK AI - 10/10 REPLY BOX</a>
-<a class="btn btn-osf" href="https://osf.io/42fmr" target="_blank">JACOB COXON - OSF 42fmr OFFICIAL</a>
-
+<p id="status" style="text-align:center;color:var(--gold);font-size:34px;margin-top:28px">Loading 15 screenshots auto...</p>
+<a class="btn btn-elon" href="https://x.com/elonmusk" target="_blank">ELON MUSK - OFFICIAL</a>
+<a class="btn btn-grok" href="https://x.com/grok" target="_blank">GROK AI - 10/10 REPLY</a>
+<a class="btn btn-osf" href="https://osf.io/42fmr" target="_blank">JACOB COXON - OSF 42fmr</a>
 </div>
-
 </div>
-
-<div class="footer"><p><b>3 PILLAR STAND - ABBOTTABAD TO UNO - v24 ULTRA CLEAN</b></p><p>Muhammad Jamil Tanoli - Abbottabad, KP, Pakistan</p><p style="font-size:26px;opacity:0.8;margin-top:18px">Font 36px - No Roman Urdu - Direct Elon Grok OSF - 100 Round Near</p></div>
-
-<script>
-async function loadAuto(){
-const s=document.getElementById('status');const b=document.getElementById('autoBox');
-try{
-const r=await fetch('https://api.github.com/repos/drssssherozes-ctrl/drssssherozes-ctrl.github.io/contents?ref=main&t='+Date.now());
-const files=await r.json();let c=0;
-files.forEach(f=>{
-if(f.name.match(/\.(jpg|jpeg|png)$/i) && !f.name.toLowerCase().includes('final-certificate')){
-c++;const d=document.createElement('div');d.className='shot';
-d.innerHTML=`<div class="tag">SHOT ${c} - ${f.name}</div><img src="${f.name}?v=${Date.now()}" loading="lazy">`;
-b.appendChild(d);
-}
-});
-s.innerHTML=`✅ ${c} TOTAL SHOTS AUTO LOADED - All visible!`;
-}catch(e){s.innerHTML='✅ 16 TOTAL SHOTS AUTO LOADED - System working!';}
-}
-loadAuto();
-</script>
-
-</body></html>
+<div class="footer"><p><b>3 PILLAR STAND - ABBOTTABAD TO UNO - v25 STANDARD FINAL</b></p><p>Muhammad Jamil Tanoli - Abbottabad, KP, Pakistan</p><p style="
