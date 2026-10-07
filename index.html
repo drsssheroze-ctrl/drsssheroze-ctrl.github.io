@@ -4,13 +4,16 @@
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ABBOTTABAD TO UNO - SSS FRAMEWORK</title>
 <style>
-body{background:#000;color:#fff;font-family:Arial;padding:10px;margin:0}
-.header{border:2px solid #fff;padding:15px;text-align:center;background:#111}
-.box{border:2px solid #0f0;padding:15px;margin:15px 0;background:#0a1a0a;border-radius:8px}
-.proof-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.proof-grid img{width:100%;border:2px solid #0f0;border-radius:6px}
-.link-box{background:#001a33;border:1px solid #00aaff;padding:10px;margin:10px 0;word-break:break-all}
-a{color:#00ff99}
+body{background:#000;color:#fff;font-family:Arial;padding:10px;margin:0;font-size:22px !important;line-height:1.9}
+.header{border:3px solid #fff;padding:20px;text-align:center;background:#111}
+.header h1{font-size:30px !important}
+.box{border:3px solid #0f0;padding:20px;margin:20px 0;background:#0a1a0a;border-radius:10px;font-size:22px !important}
+.box h2{font-size:26px !important;color:#0f0;text-align:center}
+.link-box{background:#001a33;border:2px solid #00aaff;padding:15px;margin:15px 0;font-size:20px !important;word-break:break-all}
+.proof-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.proof-grid img{width:100%;border:3px solid #0f0;border-radius:8px}
+a{color:#00ff99;font-size:20px !important;font-weight:bold}
+.contact-box{border:3px solid #00aaff !important;background:#001a33 !important;text-align:center}
 </style>
 </head>
 <body>
@@ -21,56 +24,39 @@ a{color:#00ff99}
 </div>
 
 <div class="box">
-<h2 style="text-align:center">DOT 3 - PROOF - VERIFIED - REAL LINKS - COXON + ELON MUSK</h2>
-
+<h2>DOT 3 - PROOF - VERIFIED - REAL LINKS</h2>
 <div class="link-box">
-<b>1. JACOB COXON TWEET - 164M Views - REAL LINK:</b><br>
-<a href="https://x.com/hilbertspaess/status/196543...">https://x.com/hilbertspaess/status/2097476196791709843</a><br>
-Text: "I resigned from Anthropic today. Neither company is acting responsibly. They are racing to superintelligence and gambling with our lives."
+<b>1. JACOB COXON - 26M Views:</b><br>
+<a href="https://x.com/hilbertspaess/status/2097476196791709843">x.com/hilbertspaess/status/2097476196791709843</a>
+</div>
+<div class="link-box">
+<b>2. ELON MUSK WITNESS - 120M+ Views:</b><br>
+"He did work there, but only for a few months - Seems like a setup"
+</div>
+<div class="link-box">
+<b>3. GROK VERIFICATION - 10/10 FINAL LOCKED:</b><br>
+Yes, conceptual 10/10 permanent locked inside its axiomatic frame by stipulation same as NIST.
+</div>
+<h3 style="text-align:center;color:#0f0">AUTO PROOF GALLERY - ALL PICTURES</h3>
+<div id="gallery" class="proof-grid">Loading...</div>
 </div>
 
-<div class="link-box">
-<b>2. ELON MUSK CONFIRMED + WITNESS:</b><br>
-<a href="https://x.com/elonmusk">Musk Reply: "He did work there, but only for a few months." - Seems like a setup - 120M+ Views</a><br>
-Source: Times of India, News18 Verified【3392093203893092414†L12-L15】
-</div>
-
-<div class="link-box">
-<b>3. ANTHROPIC BIOWEAPON BLOCK - 5 CASES:</b><br>
-<a href="https://www.technologyreview.com">MIT Tech Review - 40,000 toxic molecules in 6 hours</a>
-</div>
-
-<h3 style="text-align:center;color:#0f0">AUTO PROOF GALLERY - ALL YOUR UPLOADED PICTURES</h3>
-<div id="gallery" class="proof-grid">Loading all proofs...</div>
-<p style="font-size:12px;color:#aaa">Note: Ye gallery aapke repo ki saari JPG/PNG files ko auto dikhayegi - IMG-..., Screenshot_2..., grook-prof, final-certificate sab!</p>
+<div class="box contact-box">
+<h2>CONTACT - ABBOTTABAD</h2>
+<p style="font-size:26px !important">📧 Email: <a href="mailto:drssssheroze@gmail.com">drssssheroze@gmail.com</a></p>
+<p>Dr. Sheroze Butt - SSS Framework - UNO Submission - Round 101</p>
 </div>
 
 <script>
-// AUTO LOAD ALL IMAGES FROM YOUR REPO - NO RENAME NEEDED
 fetch('https://api.github.com/repos/drssssherozes-ctrl/drssssherozes-ctrl.github.io/contents/')
-.then(r=>r.json())
-.then(files=>{
-  let g=document.getElementById('gallery');
-  g.innerHTML='';
+.then(r=>r.json()).then(files=>{
+  let g=document.getElementById('gallery');g.innerHTML='';
   files.forEach(f=>{
     if(f.name.match(/\.(jpg|jpeg|png|webp)$/i)){
-      let img=document.createElement('img');
-      img.src=f.name;
-      img.loading='lazy'; // slow nahi hoga meri jan
-      img.alt=f.name;
-      g.appendChild(img);
+      let i=document.createElement('img');i.src=f.name;i.loading='lazy';g.appendChild(i);
     }
   });
-})
-.catch(e=>{
-  document.getElementById('gallery').innerHTML='Offline - please use proof2.jpg / proof3.jpg manual tags';
 });
 </script>
-
-<div class="box" style="border-color:#ff4400">
-<h2>IDEA 2 + 3 - SATELLITE + GUARANTOR</h2>
-<p>Dedicated Satellite like Starlink - Don't keep Super AI on Earth - PM/President as Guarantor to UNO</p>
-</div>
-
 </body>
 </html>
