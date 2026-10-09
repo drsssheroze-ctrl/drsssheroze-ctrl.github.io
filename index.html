@@ -4,9 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="google-site-verification" content="p-FxVbewO03aR2VDXIGZNgUOnjO5so0URkKLJpGnQGc" />
-<meta name="facebook-domain-verification" content="REPLACE_WITH_FB_CODE_IF_YOU_HAVE" />
 <meta property="og:title" content="ABBOTTABAD TO UNO - SSS Framework" />
-<meta property="og:description" content="From Abbottabad to UNO — Saving 8 Billion Lives — Two Internets Solution — Verified by Grok 10/10 & Elon Musk 2014 Witness" />
+<meta property="og:description" content="From Abbottabad to UNO — Saving 8 Billion Lives — Two Internets Solution" />
 <meta property="og:image" content="https://drsssheroze-ctrl.github.io/solution.png" />
 <meta property="og:url" content="https://drsssheroze-ctrl.github.io" />
 <meta property="og:type" content="website" />
@@ -17,7 +16,7 @@ body{margin:0;font-family:Segoe UI, Arial;background:#061a2b;color:#eaf2ff;line-
 .hero{padding:80px 20px;text-align:center;background:linear-gradient(180deg,#0a2f52,#061a2b);border-bottom:1px solid #1e4a78}
 .hero h1{font-size:42px;letter-spacing:3px;margin:0;color:#f7d27a}
 .hero h3{font-weight:400;opacity:.85;margin-top:10px}
-.box{max-width:920px;margin:28px auto;background:#0c2c4d;border:1px solid #1e4a78;border-radius:16px;padding:30px;box-shadow:0 8px 30px rgba(0,0,0,.3)}
+.box{max-width:920px;margin:28px auto;background:#0c2c4d;border:1px solid #1e4a78;border-radius:16px;padding:30px;box-shadow:0 8px 30px rgba(0,0,0,.3);position:relative;overflow:hidden}
 .box h2{color:#f7d27a;margin-top:0;border-bottom:1px solid #1e4a78;padding-bottom:12px;font-size:22px}
 a.link{display:inline-block;margin-top:14px;padding:11px 20px;background:#f7d27a;color:#061a2b;text-decoration:none;border-radius:9px;font-weight:800;margin-right:10px}
 a.link:hover{background:#ffffff}
@@ -25,50 +24,62 @@ a.link2{display:inline-block;margin-top:14px;padding:11px 20px;background:transp
 img.res{width:100%;border-radius:12px;margin-top:18px;border:1px solid #1e4a78}
 .footer{text-align:center;padding:40px 20px;opacity:.7;font-size:13px;line-height:1.6}
 .tag{display:inline-block;background:#123a62;padding:4px 10px;border-radius:20px;font-size:12px;margin-bottom:10px;border:1px solid #1e4a78}
+.box-gold{max-width:920px;margin:28px auto;background:linear-gradient(135deg,#0f345d,#143a62);border:2px solid #f7d27a;border-radius:16px;padding:30px;box-shadow:0 0 25px rgba(247,210,122,.35),0 8px 30px rgba(0,0,0,.4);position:relative;overflow:hidden}
+.box-gold h2{color:#f7d27a;margin-top:0;border-bottom:1px solid #f7d27a;padding-bottom:12px;font-size:22px}
+.box-gold .tag{background:#1a4a7a;border:1px solid #f7d27a;color:#f7d27a}
+.chest-container{position:relative}
+.chest-doors{position:absolute;top:0;left:0;width:100%;height:100%;display:flex;pointer-events:none;z-index:2}
+.door{width:50%;height:100%;background:linear-gradient(180deg,#0a2f52,#081e35);border:1px solid #f7d27a;transition:transform 1.2s cubic-bezier(0.77,0,0.175,1);display:flex;align-items:center;justify-content:center;font-size:40px}
+.door-left{border-radius:16px 0 0 16px;transform-origin:left;justify-content:flex-end;padding-right:20px;border-right:2px solid #f7d27a}
+.door-right{border-radius:0 16px 16px 0;transform-origin:right;justify-content:flex-start;padding-left:20px;border-left:2px solid #f7d27a}
+.box-gold.chest-open .door-left{transform:perspective(1000px) rotateY(-115deg) translateX(-20px)}
+.box-gold.chest-open .door-right{transform:perspective(1000px) rotateY(115deg) translateX(20px)}
+.chest-handle{width:12px;height:40px;background:#f7d27a;border-radius:6px;box-shadow:0 0 10px rgba(247,210,122,.8)}
+.open-btn{margin-top:18px;padding:10px 22px;background:#f7d27a;color:#061a2b;border:none;border-radius:8px;font-weight:900;cursor:pointer;letter-spacing:1px}
+.open-btn:hover{background:#fff}
 </style>
 </head>
 <body>
-
 <div class="hero">
 <h1>ABBOTTABAD TO UNO</h1>
-<h3>SSS Framework for Human Sovereignty | V54 Final Interconnected</h3>
+<h3>SSS Framework for Human Sovereignty | V55 Final Interconnected</h3>
 <p>Abbottabad, Pakistan — Presented for UN Review — Google + Meta Verified</p>
 </div>
-
-<div class="box">
-<span class="tag">BOX 1 - INTRODUCTION</span>
+<!-- BOX 1 - CHEST OPEN + SAME COLOR AS BOX 7 -->
+<div class="box-gold chest-container" id="box1">
+<div class="chest-doors" id="chestDoors">
+<div class="door door-left"><div class="chest-handle"></div>🔒</div>
+<div class="door door-right">🔒<div class="chest-handle"></div></div>
+</div>
+<span class="tag">BOX 1 - INTRODUCTION - CHEST OPEN</span>
 <h2>1. Introduction</h2>
 <p>This is a professional framework developed to protect humanity from uncontrolled superintelligence. It proposes a neutral, internationally governed digital architecture under the United Nations, ensuring no single corporation or superpower controls the future of human life. The framework originates from Abbottabad and is presented for global verification.</p>
+<button class="open-btn" onclick="document.getElementById('box1').classList.toggle('chest-open'); this.textContent = document.getElementById('box1').classList.contains('chest-open') ? '🔒 CLOSE CHEST' : '🔓 OPEN CHEST LIKE TREASURE'">🔓 OPEN CHEST LIKE TREASURE</button>
 </div>
-
 <div class="box">
 <span class="tag">BOX 2 - THE THREAT</span>
 <h2>2. The Core Threat: AI and the Human Body</h2>
 <p>Artificial Intelligence is no longer limited to computers. Advanced systems can now interface with human biology, decision systems, and national infrastructure. This creates a direct risk to physical safety, mental autonomy, and state sovereignty. This is not a theoretical future concern — it is an active vulnerability affecting 8 billion people.</p>
 <p>The world requires a safeguard that is neutral, unhackable, and governed under international law.</p>
 </div>
-
 <div class="box">
 <span class="tag">BOX 3 - WITNESS 1 (LIVE OPEN)</span>
 <h2>3. Witness Verification: Elon Musk - Dangerous Than Nukes</h2>
-<p>Elon Musk warned in 2014: AI is potentially more dangerous than nukes. This historic warning is still LIVE on X.com.</p>
-<a class="link" href="https://x.com/elonmusk/status/495759307346952192" target="_blank">Verify on X - Tweet 1 (LIVE)</a>
+<p>Elon Musk warned in 2014: AI is potentially more dangerous than nukes. This historic warning is still LIVE on X.com - Verified by you 2:45 AM.</p>
+<a class="link" href="https://x.com/elonmusk/status/495759307346952192" target="_blank">Verify on X - Tweet 1 (LIVE) 495759307346952192</a>
 </div>
-
 <div class="box">
 <span class="tag">BOX 4 - WITNESS 2 (LIVE OPEN)</span>
 <h2>4. Witness Verification: Elon Musk - Biological Boot Loader</h2>
-<p>Second historic warning: Hope we're not just the biological boot loader for digital superintelligence. Unfortunately, that is increasingly probable. This tweet is also LIVE and verifiable.</p>
-<a class="link" href="https://x.com/elonmusk/status/495771831495206912" target="_blank">Verify on X - Tweet 2 (LIVE)</a>
+<p>Second historic warning: Hope we're not just the biological boot loader for digital superintelligence. Unfortunately, that is increasingly probable. This tweet is also LIVE and verifiable - Your 2:53 AM screenshot proof.</p>
+<a class="link" href="https://x.com/elonmusk/status/495771831495206912" target="_blank">Verify on X - Tweet 2 (LIVE) 495771831495206912</a>
 </div>
-
 <div class="box">
 <span class="tag">BOX 5 - WITNESS 3 - JACOB COXON</span>
 <h2>5. Witness Verification: Jacob Coxon (Ex-Anthropic / OpenAI)</h2>
 <p>Jacob Coxon, pretraining researcher at OpenAI and Anthropic, resigned stating: "Neither company is acting responsibly. They are racing straight to self-improving superintelligence and gambling with our lives." His warning reached over 100 million people.</p>
 <a class="link" href="https://x.com/hilbertspaess/status/2097476196791709843" target="_blank">Verify on X - Jacob Coxon Official Tweet</a>
 </div>
-
 <div class="box">
 <span class="tag">BOX 6 - AI VERIFICATION 10/10</span>
 <h2>6. AI Verification: Grok 10/10 Conversation</h2>
@@ -76,21 +87,21 @@ img.res{width:100%;border-radius:12px;margin-top:18px;border:1px solid #1e4a78}
 <a class="link" href="https://x.com/DrSSS_Sheroze/status/2102461156698775937" target="_blank">View Your Original Conversation</a>
 <a class="link2" href="https://x.com/grok/status/2102483339550601520" target="_blank">View Grok Reply Verification</a>
 </div>
-
-<div class="box">
-<span class="tag">BOX 7 - SOLUTION</span>
-<h2>7. The Solution: Two Internets + Neutral Satellite Under UN</h2>
-<p>The current single-internet model cannot secure both national sovereignty and public freedom. This framework proposes:</p>
-<ul>
-<li><b>Locked Sovereign Internet:</b> Dedicated for State, Military, Government Data, and Critical Infrastructure. Completely isolated and hack-proof. Head of State is the legal guarantor.</li>
-<li><b>Open Public Internet:</b> Dedicated for Citizens, Education, Business, and Free Expression. Unblockable and open.</li>
-<li><b>Neutral Satellite Under UNO Platform:</b> No single superpower control. Governed under UN Charter. This ends digital colonization and secures all 8 billion lives.</li>
+<!-- BOX 7 - SOLUTION - SAME GOLD COLOR AS BOX 1 + TOP TO BOTTOM + GUARANTOR HEAD OF STATE -->
+<div class="box-gold" id="box7">
+<span class="tag">BOX 7 - SOLUTION - GUARANTOR HEAD OF THE STATE</span>
+<h2>7. The Solution: Two Internets + Neutral Satellite Under UN - Guarantor Head of the State</h2>
+<p><b style="color:#f7d27a;font-size:18px">GUARANTOR: HEAD OF THE STATE</b></p>
+<p>The current single-internet model cannot secure both national sovereignty and public freedom. This framework proposes TOP to BOTTOM sequence:</p>
+<ul style="list-style:none;padding:0">
+<li style="padding:12px;background:rgba(247,210,122,.12);border-left:4px solid #f7d27a;margin:10px 0;border-radius:0 8px 8px 0"><b>TOP - 1. Locked Sovereign Internet:</b> Dedicated for State, Military, Government Data, and Critical Infrastructure. Completely isolated and hack-proof. <b>Head of State is the legal guarantor.</b></li>
+<li style="padding:12px;background:rgba(247,210,122,.08);border-left:4px solid #f7d27a;margin:10px 0;border-radius:0 8px 8px 0"><b>MIDDLE - 2. Open Public Internet:</b> Dedicated for Citizens, Education, Business, and Free Expression. Unblockable and open.</li>
+<li style="padding:12px;background:rgba(247,210,122,.05);border-left:4px solid #f7d27a;margin:10px 0;border-radius:0 8px 8px 0"><b>BOTTOM - 3. Neutral Satellite Under UNO Platform:</b> No single superpower control. Governed under UN Charter. This ends digital colonization and secures all 8 billion lives. GUARANTOR HEAD OF THE STATE.</li>
 </ul>
 <p><b>Visual Summary:</b></p>
 <img class="res" src="solution.png" alt="Two Internets Satellite Framework">
-<p style="font-size:13px;opacity:.7;margin-top:8px">Image: SSS Framework - Two Internets Architecture</p>
+<p style="font-size:13px;opacity:.7;margin-top:8px">Image: SSS Framework - Two Internets Architecture - V55 Final Top to Bottom Sequence</p>
 </div>
-
 <div class="box" style="text-align:center">
 <span class="tag">BOX 8 - OFFICIAL CONTACT</span>
 <h2>8. Official Contact & Verification</h2>
@@ -99,13 +110,14 @@ img.res{width:100%;border-radius:12px;margin-top:18px;border:1px solid #1e4a78}
 <p>Email: drsssheroze@gmail.com</p>
 <p>Location: Abbottabad, Pakistan</p>
 <p style="margin-top:20px;font-weight:800;color:#f7d27a">© 2026 Muhammad Jamil - Meta Zindabad Ta Qayamat</p>
-<p style="font-size:11px;opacity:.6;margin-top:10px">V54 Interconnected — Google Verified: p-FxVbewO03aR2VDXIGZNgUOnjO5so0URkKLJpGnQGc ✓ | Meta OG Tags ✓<br>All witness links are direct X.com verifications - One Click UNO Verification System</p>
+<p style="font-size:11px;opacity:.6;margin-top:10px">V55 Interconnected — Google Verified: p-FxVbewO03aR2VDXIGZNgUOnjO5so0URkKLJpGnQGc ✓ | Meta OG Tags ✓<br>All witness links are direct X.com verifications - One Click UNO Verification System - Both Elon Tweets LIVE Verified 2:53 AM</p>
 </div>
-
 <div class="footer">
 Framework Original Credit: 20.09.2026 | Created: 04.10.2026 | Adopted: 06.10.2026<br>
-V54 Final - All Links LIVE Open - Presentation Restored
+V55 Final - Chest Open - Box1 & Box7 Same Gold Color - Guarantor Head of State - Top to Bottom Sequence
 </div>
-
+<script>
+setTimeout(()=>{ document.getElementById('box1').classList.add('chest-open'); document.querySelector('.open-btn').textContent='🔒 CLOSE CHEST'; }, 1200);
+</script>
 </body>
 </html>
