@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-
 Sitemap: https://drsssheroze-ctrl.github.io/sitemap.xml
